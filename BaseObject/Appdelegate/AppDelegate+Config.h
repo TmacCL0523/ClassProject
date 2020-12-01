@@ -6,5 +6,8 @@
 
 @interface AppDelegate (Config)
 
+
+-(void)rootViewController;
+
 @end
 

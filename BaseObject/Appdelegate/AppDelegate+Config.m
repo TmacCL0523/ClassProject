@@ -4,4 +4,10 @@
 
 @implementation AppDelegate (Config)
 
+-(void)rootViewController
+{
+
+}
+
+
 @end
