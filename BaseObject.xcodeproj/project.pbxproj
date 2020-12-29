@@ -11,6 +11,8 @@
 		1367DA482574E74300A8C8F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367DA472574E74300A8C8F9 /* Assets.xcassets */; };
 		1367DA4E2574E74300A8C8F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1367DA4D2574E74300A8C8F9 /* main.m */; };
 		1367DA6D2574EDD500A8C8F9 /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 1367DA6C2574EDD500A8C8F9 /* AppDelegate+Config.m */; };
+		137388AC259B2E9600FEDC27 /* BaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 137388AB259B2E9600FEDC27 /* BaseManager.m */; };
+		137388B6259B3CA900FEDC27 /* CLKitFormatString.m in Sources */ = {isa = PBXBuildFile; fileRef = 137388B5259B3CA900FEDC27 /* CLKitFormatString.m */; };
 		13763BDD258719A8007640D2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13763BDC258719A8007640D2 /* LoginViewController.m */; };
 		13763BE025871AA9007640D2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13763BDF25871AA9007640D2 /* Launch Screen.storyboard */; };
 		1390A58B25874DA000DC6816 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390A58A25874DA000DC6816 /* LoginView.m */; };
@@ -26,6 +28,12 @@
 		1367DA4D2574E74300A8C8F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1367DA6B2574EDD500A8C8F9 /* AppDelegate+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
 		1367DA6C2574EDD500A8C8F9 /* AppDelegate+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
+		137388A9259B2D0900FEDC27 /* CLKitSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitSingleton.h; sourceTree = "<group>"; };
+		137388AA259B2E9600FEDC27 /* BaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseManager.h; sourceTree = "<group>"; };
+		137388AB259B2E9600FEDC27 /* BaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseManager.m; sourceTree = "<group>"; };
+		137388B2259B320600FEDC27 /* CLKitLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitLog.h; sourceTree = "<group>"; };
+		137388B4259B3CA900FEDC27 /* CLKitFormatString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitFormatString.h; sourceTree = "<group>"; };
+		137388B5259B3CA900FEDC27 /* CLKitFormatString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLKitFormatString.m; sourceTree = "<group>"; };
 		13763B7D258713FD007640D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		13763BDB258719A8007640D2 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		13763BDC258719A8007640D2 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -53,9 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				1367DA3A2574E74100A8C8F9 /* BaseObject */,
-				1367DA392574E74100A8C8F9 /* Products */,
-				E970391399AD9639AC406128 /* Pods */,
 				26F048C77AE1AD0C7A0B02D6 /* Frameworks */,
+				E970391399AD9639AC406128 /* Pods */,
+				1367DA392574E74100A8C8F9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,8 +78,9 @@
 		1367DA3A2574E74100A8C8F9 /* BaseObject */ = {
 			isa = PBXGroup;
 			children = (
+				13738899259B165E00FEDC27 /* Utils */,
 				1367DA5A2574E78E00A8C8F9 /* Appdelegate */,
-				1367DA612574E7EF00A8C8F9 /* Expand - (扩展) */,
+				1367DA612574E7EF00A8C8F9 /* Tools */,
 				1367DA562574E75B00A8C8F9 /* Module */,
 				1367DA582574E77600A8C8F9 /* Other */,
 				1367DA572574E76800A8C8F9 /* Resource */,
@@ -166,7 +175,7 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
-		1367DA612574E7EF00A8C8F9 /* Expand - (扩展) */ = {
+		1367DA612574E7EF00A8C8F9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				1367DA652574E81800A8C8F9 /* Category */,
@@ -174,7 +183,7 @@
 				1367DA632574E80800A8C8F9 /* DataBase */,
 				1367DA622574E7FF00A8C8F9 /* Macros */,
 			);
-			path = "Expand - (扩展)";
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		1367DA622574E7FF00A8C8F9 /* Macros */ = {
@@ -221,6 +230,139 @@
 				13763BE425873DE0007640D2 /* V */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		13738899259B165E00FEDC27 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				137388B3259B3C8E00FEDC27 /* Const */,
+				137388A7259B1CE400FEDC27 /* Macro */,
+				1373889A259B174A00FEDC27 /* Category */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1373889A259B174A00FEDC27 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1373889C259B17A900FEDC27 /* Foundation */,
+				1373889B259B175400FEDC27 /* UIKit */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1373889B259B175400FEDC27 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				137388A6259B18B900FEDC27 /* UIImage */,
+				137388A5259B18A500FEDC27 /* UICollectionView */,
+				137388A4259B189B00FEDC27 /* UITableView */,
+				137388A3259B188C00FEDC27 /* UIScrollView */,
+				137388A2259B187A00FEDC27 /* UILabel */,
+				137388A1259B181F00FEDC27 /* UIButton */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		1373889C259B17A900FEDC27 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				1373889E259B17D900FEDC27 /* NSArray */,
+				137388A0259B180A00FEDC27 /* NSDate */,
+				1373889F259B17EA00FEDC27 /* NSDictionary */,
+				1373889D259B17B400FEDC27 /* NSString */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		1373889D259B17B400FEDC27 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		1373889E259B17D900FEDC27 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				137388AA259B2E9600FEDC27 /* BaseManager.h */,
+				137388AB259B2E9600FEDC27 /* BaseManager.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		1373889F259B17EA00FEDC27 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		137388A0259B180A00FEDC27 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		137388A1259B181F00FEDC27 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		137388A2259B187A00FEDC27 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		137388A3259B188C00FEDC27 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		137388A4259B189B00FEDC27 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		137388A5259B18A500FEDC27 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		137388A6259B18B900FEDC27 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		137388A7259B1CE400FEDC27 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				137388A9259B2D0900FEDC27 /* CLKitSingleton.h */,
+				137388B2259B320600FEDC27 /* CLKitLog.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		137388B3259B3C8E00FEDC27 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				137388B4259B3CA900FEDC27 /* CLKitFormatString.h */,
+				137388B5259B3CA900FEDC27 /* CLKitFormatString.m */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 		13763BE325873DDB007640D2 /* M */ = {
@@ -368,10 +510,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137388AC259B2E9600FEDC27 /* BaseManager.m in Sources */,
 				13763BDD258719A8007640D2 /* LoginViewController.m in Sources */,
 				1367DA6D2574EDD500A8C8F9 /* AppDelegate+Config.m in Sources */,
 				1367DA3D2574E74100A8C8F9 /* AppDelegate.m in Sources */,
 				1390A58B25874DA000DC6816 /* LoginView.m in Sources */,
+				137388B6259B3CA900FEDC27 /* CLKitFormatString.m in Sources */,
 				1367DA4E2574E74300A8C8F9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
