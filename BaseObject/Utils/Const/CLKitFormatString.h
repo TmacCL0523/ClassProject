@@ -46,6 +46,7 @@ FOUNDATION_EXTERN NSString *const FormatString_MDHM;
  *  yyyy/MM/dd
  */
 FOUNDATION_EXTERN NSString *const FormatString_YMD2;
+
 /**
  *  yyyy/MM/dd HH:mm
  */

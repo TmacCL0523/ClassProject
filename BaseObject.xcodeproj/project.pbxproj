@@ -11,11 +11,21 @@
 		1367DA482574E74300A8C8F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367DA472574E74300A8C8F9 /* Assets.xcassets */; };
 		1367DA4E2574E74300A8C8F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1367DA4D2574E74300A8C8F9 /* main.m */; };
 		1367DA6D2574EDD500A8C8F9 /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 1367DA6C2574EDD500A8C8F9 /* AppDelegate+Config.m */; };
-		137388AC259B2E9600FEDC27 /* BaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 137388AB259B2E9600FEDC27 /* BaseManager.m */; };
 		137388B6259B3CA900FEDC27 /* CLKitFormatString.m in Sources */ = {isa = PBXBuildFile; fileRef = 137388B5259B3CA900FEDC27 /* CLKitFormatString.m */; };
 		13763BDD258719A8007640D2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13763BDC258719A8007640D2 /* LoginViewController.m */; };
 		13763BE025871AA9007640D2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13763BDF25871AA9007640D2 /* Launch Screen.storyboard */; };
 		1390A58B25874DA000DC6816 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390A58A25874DA000DC6816 /* LoginView.m */; };
+		13A7E2E1259C58B100949FD3 /* NSMutableAttributedString+CLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2E0259C58B100949FD3 /* NSMutableAttributedString+CLKit.m */; };
+		13A7E2E6259C5FC000949FD3 /* NSString+NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2E5259C5FC000949FD3 /* NSString+NSNumber.m */; };
+		13A7E2EA259C680200949FD3 /* NSString+NSRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2E9259C680200949FD3 /* NSString+NSRange.m */; };
+		13A7E2EE259C68F100949FD3 /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2ED259C68F100949FD3 /* NSString+Regular.m */; };
+		13A7E2F2259C72B500949FD3 /* NSString+CGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2F1259C72B500949FD3 /* NSString+CGSize.m */; };
+		13A7E2F6259C756100949FD3 /* NSString+TransForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2F5259C756100949FD3 /* NSString+TransForm.m */; };
+		13A7E2FA259C774700949FD3 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2F9259C774700949FD3 /* NSString+Encryption.m */; };
+		13A7E2FE259C7B2D00949FD3 /* NSString+FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2FD259C7B2D00949FD3 /* NSString+FileManager.m */; };
+		13A7E303259C7ECA00949FD3 /* NSArray+CLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E302259C7ECA00949FD3 /* NSArray+CLKit.m */; };
+		13A7E308259C817300949FD3 /* NSDictionary+CLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E307259C817300949FD3 /* NSDictionary+CLKit.m */; };
+		13A7E30E259C836300949FD3 /* NSMutableArray+CLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E30D259C836300949FD3 /* NSMutableArray+CLKit.m */; };
 		CBAC24578CCBD4D5550D43C7 /* Pods_BaseObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F50EC3CBD7BBDA0E32ECB02 /* Pods_BaseObject.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,9 +39,6 @@
 		1367DA6B2574EDD500A8C8F9 /* AppDelegate+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
 		1367DA6C2574EDD500A8C8F9 /* AppDelegate+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
 		137388A9259B2D0900FEDC27 /* CLKitSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitSingleton.h; sourceTree = "<group>"; };
-		137388AA259B2E9600FEDC27 /* BaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseManager.h; sourceTree = "<group>"; };
-		137388AB259B2E9600FEDC27 /* BaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseManager.m; sourceTree = "<group>"; };
-		137388B2259B320600FEDC27 /* CLKitLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitLog.h; sourceTree = "<group>"; };
 		137388B4259B3CA900FEDC27 /* CLKitFormatString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitFormatString.h; sourceTree = "<group>"; };
 		137388B5259B3CA900FEDC27 /* CLKitFormatString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLKitFormatString.m; sourceTree = "<group>"; };
 		13763B7D258713FD007640D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -40,6 +47,32 @@
 		13763BDF25871AA9007640D2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		1390A58925874DA000DC6816 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		1390A58A25874DA000DC6816 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		13A7E2D8259C1E0500949FD3 /* CLKitHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitHeaderFile.h; sourceTree = "<group>"; };
+		13A7E2D9259C211200949FD3 /* CLKitMacroFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitMacroFile.h; sourceTree = "<group>"; };
+		13A7E2DE259C588700949FD3 /* CLKit_NSString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKit_NSString.h; sourceTree = "<group>"; };
+		13A7E2DF259C58B100949FD3 /* NSMutableAttributedString+CLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CLKit.h"; sourceTree = "<group>"; };
+		13A7E2E0259C58B100949FD3 /* NSMutableAttributedString+CLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CLKit.m"; sourceTree = "<group>"; };
+		13A7E2E4259C5FC000949FD3 /* NSString+NSNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+NSNumber.h"; sourceTree = "<group>"; };
+		13A7E2E5259C5FC000949FD3 /* NSString+NSNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSNumber.m"; sourceTree = "<group>"; };
+		13A7E2E8259C680200949FD3 /* NSString+NSRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+NSRange.h"; sourceTree = "<group>"; };
+		13A7E2E9259C680200949FD3 /* NSString+NSRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSRange.m"; sourceTree = "<group>"; };
+		13A7E2EC259C68F100949FD3 /* NSString+Regular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regular.h"; sourceTree = "<group>"; };
+		13A7E2ED259C68F100949FD3 /* NSString+Regular.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regular.m"; sourceTree = "<group>"; };
+		13A7E2F0259C72B500949FD3 /* NSString+CGSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CGSize.h"; sourceTree = "<group>"; };
+		13A7E2F1259C72B500949FD3 /* NSString+CGSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CGSize.m"; sourceTree = "<group>"; };
+		13A7E2F4259C756100949FD3 /* NSString+TransForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+TransForm.h"; sourceTree = "<group>"; };
+		13A7E2F5259C756100949FD3 /* NSString+TransForm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+TransForm.m"; sourceTree = "<group>"; };
+		13A7E2F8259C774700949FD3 /* NSString+Encryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
+		13A7E2F9259C774700949FD3 /* NSString+Encryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
+		13A7E2FC259C7B2D00949FD3 /* NSString+FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FileManager.h"; sourceTree = "<group>"; };
+		13A7E2FD259C7B2D00949FD3 /* NSString+FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FileManager.m"; sourceTree = "<group>"; };
+		13A7E301259C7ECA00949FD3 /* NSArray+CLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+CLKit.h"; sourceTree = "<group>"; };
+		13A7E302259C7ECA00949FD3 /* NSArray+CLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CLKit.m"; sourceTree = "<group>"; };
+		13A7E306259C817300949FD3 /* NSDictionary+CLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CLKit.h"; sourceTree = "<group>"; };
+		13A7E307259C817300949FD3 /* NSDictionary+CLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CLKit.m"; sourceTree = "<group>"; };
+		13A7E30B259C82C000949FD3 /* CLKitFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitFoundation.h; sourceTree = "<group>"; };
+		13A7E30C259C836300949FD3 /* NSMutableArray+CLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CLKit.h"; sourceTree = "<group>"; };
+		13A7E30D259C836300949FD3 /* NSMutableArray+CLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CLKit.m"; sourceTree = "<group>"; };
 		61B45C1555F0559973587DC9 /* Pods-BaseObject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseObject.release.xcconfig"; path = "Target Support Files/Pods-BaseObject/Pods-BaseObject.release.xcconfig"; sourceTree = "<group>"; };
 		9F50EC3CBD7BBDA0E32ECB02 /* Pods_BaseObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A763992A7676BED498BBD600 /* Pods-BaseObject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseObject.debug.xcconfig"; path = "Target Support Files/Pods-BaseObject/Pods-BaseObject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +271,7 @@
 				137388B3259B3C8E00FEDC27 /* Const */,
 				137388A7259B1CE400FEDC27 /* Macro */,
 				1373889A259B174A00FEDC27 /* Category */,
+				13A7E2D8259C1E0500949FD3 /* CLKitHeaderFile.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -254,6 +288,7 @@
 		1373889B259B175400FEDC27 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				13A7E2DC259C320500949FD3 /* UIView */,
 				137388A6259B18B900FEDC27 /* UIImage */,
 				137388A5259B18A500FEDC27 /* UICollectionView */,
 				137388A4259B189B00FEDC27 /* UITableView */,
@@ -270,7 +305,9 @@
 				1373889E259B17D900FEDC27 /* NSArray */,
 				137388A0259B180A00FEDC27 /* NSDate */,
 				1373889F259B17EA00FEDC27 /* NSDictionary */,
+				13A7E305259C810700949FD3 /* NSObject */,
 				1373889D259B17B400FEDC27 /* NSString */,
+				13A7E30B259C82C000949FD3 /* CLKitFoundation.h */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -278,6 +315,23 @@
 		1373889D259B17B400FEDC27 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				13A7E2DE259C588700949FD3 /* CLKit_NSString.h */,
+				13A7E2DF259C58B100949FD3 /* NSMutableAttributedString+CLKit.h */,
+				13A7E2E0259C58B100949FD3 /* NSMutableAttributedString+CLKit.m */,
+				13A7E2F0259C72B500949FD3 /* NSString+CGSize.h */,
+				13A7E2F1259C72B500949FD3 /* NSString+CGSize.m */,
+				13A7E2F8259C774700949FD3 /* NSString+Encryption.h */,
+				13A7E2F9259C774700949FD3 /* NSString+Encryption.m */,
+				13A7E2E4259C5FC000949FD3 /* NSString+NSNumber.h */,
+				13A7E2E5259C5FC000949FD3 /* NSString+NSNumber.m */,
+				13A7E2E8259C680200949FD3 /* NSString+NSRange.h */,
+				13A7E2E9259C680200949FD3 /* NSString+NSRange.m */,
+				13A7E2EC259C68F100949FD3 /* NSString+Regular.h */,
+				13A7E2ED259C68F100949FD3 /* NSString+Regular.m */,
+				13A7E2F4259C756100949FD3 /* NSString+TransForm.h */,
+				13A7E2F5259C756100949FD3 /* NSString+TransForm.m */,
+				13A7E2FC259C7B2D00949FD3 /* NSString+FileManager.h */,
+				13A7E2FD259C7B2D00949FD3 /* NSString+FileManager.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -285,8 +339,10 @@
 		1373889E259B17D900FEDC27 /* NSArray */ = {
 			isa = PBXGroup;
 			children = (
-				137388AA259B2E9600FEDC27 /* BaseManager.h */,
-				137388AB259B2E9600FEDC27 /* BaseManager.m */,
+				13A7E301259C7ECA00949FD3 /* NSArray+CLKit.h */,
+				13A7E302259C7ECA00949FD3 /* NSArray+CLKit.m */,
+				13A7E30C259C836300949FD3 /* NSMutableArray+CLKit.h */,
+				13A7E30D259C836300949FD3 /* NSMutableArray+CLKit.m */,
 			);
 			path = NSArray;
 			sourceTree = "<group>";
@@ -294,6 +350,8 @@
 		1373889F259B17EA00FEDC27 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				13A7E306259C817300949FD3 /* NSDictionary+CLKit.h */,
+				13A7E307259C817300949FD3 /* NSDictionary+CLKit.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -351,7 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				137388A9259B2D0900FEDC27 /* CLKitSingleton.h */,
-				137388B2259B320600FEDC27 /* CLKitLog.h */,
+				13A7E2D9259C211200949FD3 /* CLKitMacroFile.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -379,6 +437,20 @@
 				1390A58A25874DA000DC6816 /* LoginView.m */,
 			);
 			path = V;
+			sourceTree = "<group>";
+		};
+		13A7E2DC259C320500949FD3 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		13A7E305259C810700949FD3 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 		26F048C77AE1AD0C7A0B02D6 /* Frameworks */ = {
@@ -510,13 +582,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				137388AC259B2E9600FEDC27 /* BaseManager.m in Sources */,
 				13763BDD258719A8007640D2 /* LoginViewController.m in Sources */,
+				13A7E2EA259C680200949FD3 /* NSString+NSRange.m in Sources */,
 				1367DA6D2574EDD500A8C8F9 /* AppDelegate+Config.m in Sources */,
 				1367DA3D2574E74100A8C8F9 /* AppDelegate.m in Sources */,
+				13A7E2E6259C5FC000949FD3 /* NSString+NSNumber.m in Sources */,
+				13A7E2F2259C72B500949FD3 /* NSString+CGSize.m in Sources */,
 				1390A58B25874DA000DC6816 /* LoginView.m in Sources */,
+				13A7E2EE259C68F100949FD3 /* NSString+Regular.m in Sources */,
+				13A7E308259C817300949FD3 /* NSDictionary+CLKit.m in Sources */,
 				137388B6259B3CA900FEDC27 /* CLKitFormatString.m in Sources */,
+				13A7E2FE259C7B2D00949FD3 /* NSString+FileManager.m in Sources */,
+				13A7E303259C7ECA00949FD3 /* NSArray+CLKit.m in Sources */,
+				13A7E30E259C836300949FD3 /* NSMutableArray+CLKit.m in Sources */,
 				1367DA4E2574E74300A8C8F9 /* main.m in Sources */,
+				13A7E2F6259C756100949FD3 /* NSString+TransForm.m in Sources */,
+				13A7E2FA259C774700949FD3 /* NSString+Encryption.m in Sources */,
+				13A7E2E1259C58B100949FD3 /* NSMutableAttributedString+CLKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

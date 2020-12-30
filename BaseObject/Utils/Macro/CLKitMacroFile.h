@@ -1,12 +1,15 @@
-//
-//  CLKitLog.h
-//  BaseObject
-//
-//  Created by QiYue on 2020/12/29.
-//
+/**
+ *********************************************************************************
+ *
+ * 用户名:     hcl
+ * 文件名:     CLKitMacroFile.h
+ * 创建时间:    2020-12-29
+ *
+ *********************************************************************************
+ **/
 
-#ifndef CLKitLog_h
-#define CLKitLog_h
+#ifndef CLKitMacroFile_h
+#define CLKitMacroFile_h
 
 #ifdef DEBUG
 
@@ -248,4 +251,4 @@
 #define CLKit_DegreeFrom(radian)  (radian * 180.0) / (M_PI)
 #define CLKit_GetImage(imageName) [UIImage imageNamed:imageName]
 
-#endif /* CLKitLog_h */
+#endif /* CLKitMacroFile_h */
