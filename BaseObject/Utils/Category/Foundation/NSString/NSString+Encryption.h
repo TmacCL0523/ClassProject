@@ -12,16 +12,25 @@
 
 @interface NSString (Encryption)
 
-/// 字符串 - MD5
+
+/**
+ * Function: 字符串 - MD5
+ */
 - (NSString *)cl_MD5String;
 
-/// 字符串 - SHA1
+/**
+ * Function: 字符串 - SHA1
+ */
 - (NSString *)cl_SHA1string;
 
-/// 字符串 - SHA256
+/**
+ * Function: 字符串 - SHA256
+ */
 - (NSString *)cl_SHA256string;
 
-/// 字符串 - SHA512
+/**
+ * Function: 字符串 - SHA512
+ */
 - (NSString *)cl_SHA512string;
 
 /// 检查自身是否追加字符串

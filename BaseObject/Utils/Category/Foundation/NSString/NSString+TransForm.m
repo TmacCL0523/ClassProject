@@ -72,4 +72,58 @@
     return subStr;
 }
 
+/**
+ *  清除html标签
+ */
+- (NSString *)cl_removeHtmlTags {
+    return [self stringByReplacingOccurrencesOfString:@"<[^>]+>" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, self.length)];
+}
+
+/**
+ *  清除js脚本
+ */
+- (NSString *)cl_removeJaveScript {
+    NSMutableString *    mString = [self mutableCopy];
+    NSError *            error;
+    NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"<script[^>]*>[\\w\\W]*</script>" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray *            matches = [regex matchesInString:mString options:NSMatchingReportProgress range:NSMakeRange(0, [mString length])];
+    for( NSTextCheckingResult *match in [matches reverseObjectEnumerator] ) {
+        [mString replaceCharactersInRange:match.range withString:@""];
+    }
+    return [mString cl_removeHtmlTags];
+}
+
+/**
+ *  去除空格
+ */
+- (NSString *)cl_removeSpace {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+}
+
+/**
+ *  去除空格与空行
+ */
+- (NSString *)cl_removeSpaceAndBankLine {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+/// 随机字符串
++ (NSString *)cl_RandomString {
+    NSInteger        count        = arc4random_uniform(200);
+    NSString *       letters      = @"0123456789ABCDEFGHIJKLMNOPQRST我们还是爱你的狗子你变了,.!我QWERTYUI偶怕对方过后注册风格好看UI欧派";
+    NSMutableString *randomString = [NSMutableString stringWithCapacity:count];
+
+    for( NSInteger i = 0; i < count; i++ ) {
+        [randomString appendFormat:@"%C", [letters characterAtIndex:arc4random_uniform(letters.length)]];
+    }
+    return randomString;
+}
+
+/// 根据key取不同语言字符串 （国际化操作）
+/// @param key 关键字
+/// @param table 表名
++ (NSString *)cl_GetStrForLanguageWithKey:(NSString *)key withTable:(NSString *)table {
+    NSString *translated = NSLocalizedStringFromTable(key, table, nil);
+    return translated;
+}
 @end

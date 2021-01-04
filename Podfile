@@ -7,7 +7,7 @@ target 'BaseObject' do
   use_frameworks!
 
   # Pods for BaseObject
-pod 'CLKitHelp'
+#pod 'CLKitHelp'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

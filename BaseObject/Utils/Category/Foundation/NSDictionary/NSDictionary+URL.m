@@ -1,17 +1,16 @@
-/**
+/*
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDictionary+CLKit.m
+ * 文件名:     NSDictionary+URL.m
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
- **/
+ */
 
-#import "NSDictionary+CLKit.h"
+#import "NSDictionary+URL.h"
 
-@implementation NSDictionary (CLKit)
-
+@implementation NSDictionary (URL)
 /// 字典转json字符串
 - (NSString *)cl_dictionaryToJson {
     return [NSDictionary cl_dictionaryToJson:self];
@@ -33,5 +32,4 @@
         return error.localizedDescription;
     }
 }
-
 @end

@@ -1,22 +1,18 @@
-/**
+/*
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDictionary+CLKit.h
+ * 文件名:     NSDictionary+XML.h
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
- **/
+ */
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (CLKit)
+@interface NSDictionary (XML)
 
-/// 字典转json字符串
-- (NSString *)cl_dictionaryToJson;
-
-/// 字典转json字符串
-/// @param dictionary 字典
-+ (NSString *)cl_dictionaryToJson:(NSDictionary *)dictionary;
+/// 将NSDictionary转换成XML 字符串
+- (NSString *)cl_XMLString;
 
 @end

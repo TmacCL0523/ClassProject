@@ -41,4 +41,7 @@
 /// @param attributeDictionary 富文本样式
 - (CGFloat)cl_widthWithStringAttributeDictionary:(NSDictionary<NSString *, id> *)attributeDictionary;
 
+/// 反转字符串
+/// @param strSrc 被反转字符串
++ (NSString *)cl_reverseString:(NSString *)strSrc;
 @end

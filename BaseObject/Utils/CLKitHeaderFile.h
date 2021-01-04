@@ -9,7 +9,7 @@
 #define CLKitHeaderFile_h
 
 //TODO: 时间戳格式
-#import "CLKitFormatString.h"
+#import "CLKitConst.h"
 //TODO: 宏文件- 单例
 #import "CLKitSingleton.h"
 //TODO: 宏文件
