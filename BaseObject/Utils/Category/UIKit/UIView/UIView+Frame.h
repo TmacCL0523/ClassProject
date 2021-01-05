@@ -38,7 +38,7 @@
 @property (nonatomic) CGFloat width;
 
 /**
- * Function: 搞
+ * Function: 高
  */
 @property (nonatomic) CGFloat height;
 
