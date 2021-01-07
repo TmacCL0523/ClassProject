@@ -12,7 +12,7 @@
 #define CLKit_UIKit_h
 
 // TODO: UIButton
-#import "CLKitButtonHeaderFile"
+#import "CLKitButtonHeaderFile.h"
 // TODO: UIView
 #import "CLKitViewHeaderFile.h"
 // TODO: UIImage

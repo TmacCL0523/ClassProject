@@ -55,7 +55,7 @@
     btn.frame     = CGRectMake(0, 0, 40, 40);
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:selectImageName] forState:UIControlEventTouchUpInside];
+    [btn setImage:[UIImage imageNamed:selectImageName] forState:UIControlStateHighlighted];
 
     [btn cl_addTargerWithAction:^(UIButton *btn) {
         if( method ) {

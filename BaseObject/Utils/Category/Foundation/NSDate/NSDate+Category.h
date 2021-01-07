@@ -65,7 +65,7 @@
 @property (nonatomic, readonly) NSString *datehmString;
 
 /// 时间戳
-@property (nonatomic, strong) NSString *timeStamp;
+@property (nonatomic, readonly) NSString *timeStamp;
 #pragma mark ================类 - 方法=================
 + (NSCalendar *)currentCalendar;
 

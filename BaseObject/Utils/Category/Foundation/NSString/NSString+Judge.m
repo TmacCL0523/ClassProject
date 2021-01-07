@@ -26,7 +26,13 @@
     //返回最近结果
     return pinyin;
 }
-
+/// 判断是否URL
+- (BOOL)cl_regularIsUrl {
+    NSString *pattern = @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))";
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:pattern options:0 error:nil];
+    NSArray *results = [regex matchesInString:self options:0 range:NSMakeRange(0, self.length)];
+    return results.count > 0;
+}
 /// 判断是否包含中文
 - (BOOL)cl_CheckContainChinese {
     NSUInteger length = [self length];

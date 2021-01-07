@@ -114,7 +114,7 @@
     NSMutableString *randomString = [NSMutableString stringWithCapacity:count];
 
     for( NSInteger i = 0; i < count; i++ ) {
-        [randomString appendFormat:@"%C", [letters characterAtIndex:arc4random_uniform(letters.length)]];
+        [randomString appendFormat:@"%C", [letters characterAtIndex:arc4random_uniform( (uint32_t)letters.length)]];
     }
     return randomString;
 }

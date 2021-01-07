@@ -7,7 +7,6 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Config.h"
-#import "BaseManager.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +19,6 @@
 {
     // Override point for customization after application launch.
     [self rootViewController];
-
     return YES;
 }
 

@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133AEDFF25A5641F00B144CF /* NSArray+LogUTF8String.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AEDFE25A5641F00B144CF /* NSArray+LogUTF8String.m */; };
+		133AEE0325A5671800B144CF /* NSDictionary+LogUTF8String.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AEE0225A5671800B144CF /* NSDictionary+LogUTF8String.m */; };
+		133AEE2C25A5A67A00B144CF /* NSObject+SystemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AEE2B25A5A67A00B144CF /* NSObject+SystemService.m */; };
+		133AEE3425A5B88700B144CF /* text2audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 133AEE3325A5B88700B144CF /* text2audio.wav */; };
+		133AEE3925A5BB6E00B144CF /* CLSoundTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AEE3825A5BB6E00B144CF /* CLSoundTools.m */; };
+		133AEE3D25A5BBE500B144CF /* CLPermissionsTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 133AEE3C25A5BBE500B144CF /* CLPermissionsTools.m */; };
 		1367DA3D2574E74100A8C8F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1367DA3C2574E74100A8C8F9 /* AppDelegate.m */; };
 		1367DA482574E74300A8C8F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367DA472574E74300A8C8F9 /* Assets.xcassets */; };
 		1367DA4E2574E74300A8C8F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1367DA4D2574E74300A8C8F9 /* main.m */; };
@@ -55,6 +61,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		133AEDFD25A5641F00B144CF /* NSArray+LogUTF8String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+LogUTF8String.h"; sourceTree = "<group>"; };
+		133AEDFE25A5641F00B144CF /* NSArray+LogUTF8String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LogUTF8String.m"; sourceTree = "<group>"; };
+		133AEE0125A5671800B144CF /* NSDictionary+LogUTF8String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LogUTF8String.h"; sourceTree = "<group>"; };
+		133AEE0225A5671800B144CF /* NSDictionary+LogUTF8String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LogUTF8String.m"; sourceTree = "<group>"; };
+		133AEE1D25A5969700B144CF /* CLKitUtilsMacroFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitUtilsMacroFiles.h; sourceTree = "<group>"; };
+		133AEE2A25A5A67A00B144CF /* NSObject+SystemService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SystemService.h"; sourceTree = "<group>"; };
+		133AEE2B25A5A67A00B144CF /* NSObject+SystemService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SystemService.m"; sourceTree = "<group>"; };
+		133AEE3325A5B88700B144CF /* text2audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = text2audio.wav; sourceTree = "<group>"; };
+		133AEE3725A5BB6E00B144CF /* CLSoundTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLSoundTools.h; sourceTree = "<group>"; };
+		133AEE3825A5BB6E00B144CF /* CLSoundTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLSoundTools.m; sourceTree = "<group>"; };
+		133AEE3B25A5BBE500B144CF /* CLPermissionsTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLPermissionsTools.h; sourceTree = "<group>"; };
+		133AEE3C25A5BBE500B144CF /* CLPermissionsTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLPermissionsTools.m; sourceTree = "<group>"; };
 		1367DA382574E74100A8C8F9 /* BaseObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1367DA3B2574E74100A8C8F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1367DA3C2574E74100A8C8F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,7 +116,6 @@
 		1390A58925874DA000DC6816 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		1390A58A25874DA000DC6816 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		13A7E2D8259C1E0500949FD3 /* CLKitHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitHeaderFile.h; sourceTree = "<group>"; };
-		13A7E2D9259C211200949FD3 /* CLKitMacroFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitMacroFile.h; sourceTree = "<group>"; };
 		13A7E2DF259C58B100949FD3 /* NSMutableAttributedString+CLKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CLKit.h"; sourceTree = "<group>"; };
 		13A7E2E0259C58B100949FD3 /* NSMutableAttributedString+CLKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CLKit.m"; sourceTree = "<group>"; };
 		13A7E2E4259C5FC000949FD3 /* NSString+NSNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+NSNumber.h"; sourceTree = "<group>"; };
@@ -169,6 +186,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133AEE3625A5BB4B00B144CF /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				133AEE3725A5BB6E00B144CF /* CLSoundTools.h */,
+				133AEE3825A5BB6E00B144CF /* CLSoundTools.m */,
+				133AEE3B25A5BBE500B144CF /* CLPermissionsTools.h */,
+				133AEE3C25A5BBE500B144CF /* CLPermissionsTools.m */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		1367DA2F2574E74100A8C8F9 = {
 			isa = PBXGroup;
 			children = (
@@ -190,12 +218,12 @@
 		1367DA3A2574E74100A8C8F9 /* BaseObject */ = {
 			isa = PBXGroup;
 			children = (
-				13738899259B165E00FEDC27 /* Utils */,
 				1367DA5A2574E78E00A8C8F9 /* Appdelegate */,
-				1367DA612574E7EF00A8C8F9 /* Tools */,
 				1367DA562574E75B00A8C8F9 /* Module */,
 				1367DA582574E77600A8C8F9 /* Other */,
 				1367DA572574E76800A8C8F9 /* Resource */,
+				1367DA612574E7EF00A8C8F9 /* Tools */,
+				13738899259B165E00FEDC27 /* Utils */,
 				1367DA592574E77F00A8C8F9 /* Vender */,
 			);
 			path = BaseObject;
@@ -276,6 +304,7 @@
 		1367DA5F2574E7CB00A8C8F9 /* Auto */ = {
 			isa = PBXGroup;
 			children = (
+				133AEE3325A5B88700B144CF /* text2audio.wav */,
 			);
 			path = Auto;
 			sourceTree = "<group>";
@@ -290,6 +319,7 @@
 		1367DA612574E7EF00A8C8F9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				133AEE3625A5BB4B00B144CF /* Custom */,
 				1367DA652574E81800A8C8F9 /* Category */,
 				1367DA642574E80F00A8C8F9 /* Const */,
 				1367DA632574E80800A8C8F9 /* DataBase */,
@@ -347,10 +377,10 @@
 		13738899259B165E00FEDC27 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				137388B3259B3C8E00FEDC27 /* Const */,
-				137388A7259B1CE400FEDC27 /* Macro */,
 				1373889A259B174A00FEDC27 /* Category */,
 				13A7E2D8259C1E0500949FD3 /* CLKitHeaderFile.h */,
+				137388B3259B3C8E00FEDC27 /* Const */,
+				137388A7259B1CE400FEDC27 /* Macro */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -426,6 +456,8 @@
 			children = (
 				13C2D4BD25A2BA49004DF9E5 /* NSArray+SafeOperate.h */,
 				13C2D4BE25A2BA49004DF9E5 /* NSArray+SafeOperate.m */,
+				133AEDFD25A5641F00B144CF /* NSArray+LogUTF8String.h */,
+				133AEDFE25A5641F00B144CF /* NSArray+LogUTF8String.m */,
 			);
 			path = NSArray;
 			sourceTree = "<group>";
@@ -441,6 +473,8 @@
 				13C2D4CD25A2C32D004DF9E5 /* NSDictionary+XML.m */,
 				13C2D4D025A2C52D004DF9E5 /* NSDictionary+Merge.h */,
 				13C2D4D125A2C52D004DF9E5 /* NSDictionary+Merge.m */,
+				133AEE0125A5671800B144CF /* NSDictionary+LogUTF8String.h */,
+				133AEE0225A5671800B144CF /* NSDictionary+LogUTF8String.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -517,7 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				137388A9259B2D0900FEDC27 /* CLKitSingleton.h */,
-				13A7E2D9259C211200949FD3 /* CLKitMacroFile.h */,
+				133AEE1D25A5969700B144CF /* CLKitUtilsMacroFiles.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -580,6 +614,8 @@
 			children = (
 				13C2D4E225A2EC25004DF9E5 /* NSObject+Category.h */,
 				13C2D4E325A2EC25004DF9E5 /* NSObject+Category.m */,
+				133AEE2A25A5A67A00B144CF /* NSObject+SystemService.h */,
+				133AEE2B25A5A67A00B144CF /* NSObject+SystemService.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -630,6 +666,8 @@
 				1367DA342574E74100A8C8F9 /* Sources */,
 				1367DA352574E74100A8C8F9 /* Frameworks */,
 				1367DA362574E74100A8C8F9 /* Resources */,
+				03F22C50018827B349555AF0 /* [CP] Embed Pods Frameworks */,
+				0CE8F68578B1237B7C47F778 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -676,6 +714,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133AEE3425A5B88700B144CF /* text2audio.wav in Resources */,
 				13763BE025871AA9007640D2 /* Launch Screen.storyboard in Resources */,
 				1367DA482574E74300A8C8F9 /* Assets.xcassets in Resources */,
 			);
@@ -684,6 +723,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03F22C50018827B349555AF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaseObject/Pods-BaseObject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaseObject/Pods-BaseObject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseObject/Pods-BaseObject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		05AEAFEA6FD133C31F8A7BD8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -706,6 +762,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0CE8F68578B1237B7C47F778 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaseObject/Pods-BaseObject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaseObject/Pods-BaseObject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseObject/Pods-BaseObject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -715,10 +788,12 @@
 			files = (
 				13763BDD258719A8007640D2 /* LoginViewController.m in Sources */,
 				13C2D50A25A31580004DF9E5 /* UIButton+Action.m in Sources */,
+				133AEE3D25A5BBE500B144CF /* CLPermissionsTools.m in Sources */,
 				13A7E2EA259C680200949FD3 /* NSString+NSRange.m in Sources */,
 				13C2D4E425A2EC25004DF9E5 /* NSObject+Category.m in Sources */,
 				1367DA6D2574EDD500A8C8F9 /* AppDelegate+Config.m in Sources */,
 				1367DA3D2574E74100A8C8F9 /* AppDelegate.m in Sources */,
+				133AEE2C25A5A67A00B144CF /* NSObject+SystemService.m in Sources */,
 				13C2D4F625A30045004DF9E5 /* NSIndexPath+Category.m in Sources */,
 				13C2D4E825A2F0F9004DF9E5 /* NSString+MimeType.m in Sources */,
 				13A7E2E6259C5FC000949FD3 /* NSString+NSNumber.m in Sources */,
@@ -734,6 +809,7 @@
 				13C2D4C925A2C2AC004DF9E5 /* NSDictionary+URL.m in Sources */,
 				13A7E2EE259C68F100949FD3 /* NSString+Regular.m in Sources */,
 				138A7FA925A46E22001D4730 /* UIBarButtonItem+Category.m in Sources */,
+				133AEDFF25A5641F00B144CF /* NSArray+LogUTF8String.m in Sources */,
 				13C2D4DB25A2EB0A004DF9E5 /* NSDate+Category.m in Sources */,
 				138A7F7525A43A6D001D4730 /* UIImage+Size.m in Sources */,
 				13C2D4D225A2C52D004DF9E5 /* NSDictionary+Merge.m in Sources */,
@@ -744,11 +820,13 @@
 				13A7E2F6259C756100949FD3 /* NSString+TransForm.m in Sources */,
 				13C2D4C525A2BDFA004DF9E5 /* NSDictionary+SafeOperate.m in Sources */,
 				138A7F8F25A45BFA001D4730 /* UILabel+Category.m in Sources */,
+				133AEE3925A5BB6E00B144CF /* CLSoundTools.m in Sources */,
 				13A7E2FA259C774700949FD3 /* NSString+Encryption.m in Sources */,
 				13C2D4F125A2FD62004DF9E5 /* NSData+APNSToken.m in Sources */,
 				138A7F6625A41469001D4730 /* UIView+Screenshot.m in Sources */,
 				138A7F6E25A41772001D4730 /* UIView+Animation.m in Sources */,
 				138A7F9C25A465A6001D4730 /* UITableView+Category.m in Sources */,
+				133AEE0325A5671800B144CF /* NSDictionary+LogUTF8String.m in Sources */,
 				13C2D50E25A31853004DF9E5 /* UIView+Frame.m in Sources */,
 				13C2D50625A30F20004DF9E5 /* UIButton+Category.m in Sources */,
 				13C2D50025A30E06004DF9E5 /* UIButton+ImagePosition.m in Sources */,
@@ -880,7 +958,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5B3NSVCL23;
+				DEVELOPMENT_TEAM = 42UV2FRKWN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseObject/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/BaseObject/Resource/Plist/Info.plist";
@@ -902,7 +980,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5B3NSVCL23;
+				DEVELOPMENT_TEAM = 42UV2FRKWN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseObject/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/BaseObject/Resource/Plist/Info.plist";

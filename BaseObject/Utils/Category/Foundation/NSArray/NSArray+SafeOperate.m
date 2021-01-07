@@ -360,7 +360,7 @@
 
 /// 添加类型 - CGSize
 /// @param object 元素
-- (void)addSize:(CGSize)object {
+- (void)cl_addSize:(CGSize)object {
     [self addObject:NSStringFromCGSize(object)];
 }
 

@@ -16,6 +16,9 @@
 /// @param chinese 中文字符串
 + (NSString *)cl_CheckPinYinWithStr:(NSString *)chinese;
 
+/// 判断是否URL
+- (BOOL)cl_regularIsUrl;
+
 /**
  *  判断是否包含中文
  */

@@ -29,7 +29,7 @@
 /// TODO: 背景颜色
 /// @param color 默认值为nil, 透明色
 /// @param range 富文本应用字符串
-#warning NSForegroundColorAttributeName 和 NSBackgroundColorAttributeName 的低位是相等的，跟前面介绍的 textColor 一样，哪个属性最后一次赋值，就会冲掉前面的效果
+/// NSForegroundColorAttributeName 和 NSBackgroundColorAttributeName 的低位是相等的，跟前面介绍的 textColor 一样，哪个属性最后一次赋值，就会冲掉前面的效果
 - (void)cl_changeclckgroundColor:(UIColor *)color range:(NSRange)range {
     [self addAttribute:NSBackgroundColorAttributeName value:color range:range];
 }

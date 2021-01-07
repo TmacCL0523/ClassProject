@@ -1,38 +1,37 @@
-/**
+/*
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     CLKitMacroFile.h
+ * 文件名:     CLKitUtilsMacroFiles.h
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
- **/
+ */
 
-#ifndef CLKitMacroFile_h
-#define CLKitMacroFile_h
+#ifndef CLKitUtilsMacroFiles_h
+#define CLKitUtilsMacroFiles_h
+
+#pragma mark =================== Log ===================
 
 #ifdef DEBUG
-
-    #define Log(FORMAT, ...)                                                                                                                                                           \
-        fprintf(stderr, "🙏BUG🙏\t[⌚️：%s] [文件: %s\t 方法: %s\t Line: %d] \t打印开始 LOG👉\t%s\t 👈\n", __TIME__,                                               \
-                [[NSString stringWithFormat:@"%@", NSStringFromClass([self class])] UTF8String], [[NSString stringWithFormat:@"%@", NSStringFromSelector(_cmd)] UTF8String], __LINE__, \
-                [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+    #define CLLog(FORMAT, ...)                                                                                                                                        \
+        fprintf(stderr, "\n------- 🈶 BUG🈚️ 🆚 DEBUG🈲 🈶 -------\n编译时间:\t%s\n文件名:\t%s\n方法名:\t%s\n行号:\t%d\n打印信息:\t%s\n------- 🈚️ 狗子到底了 🈚️ -------\n", __TIME__, \
+                [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], [[[NSString stringWithUTF8String:__func__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 #else
-    #define Log(fmt, ...)
+    #define CLLog(fmt, ...)
 #endif
 
-#define LogBounds(view)     Log(@"%s bounds: %@", #view, NSStringFromCGRect([view bounds]))
-#define LogFrame(view)      Log(@"%s frame: %@", #view, NSStringFromCGRect([view frame]))
-#define LogRect(rect)       Log(@"%s : %@", #rect, NSStringFromCGRect(rect))
-#define LogSize(size)       Log(@"%s : %@", #size, NSStringFromCGSize(size))
-#define LogPoint(point)     Log(@"%s : %@", #point, NSStringFromCGPoint(point))
-#define LogString(str)      Log(@"%s : %@", #str, str)
-#define LogObj(obj)         Log(@"%s : %@", #obj, obj)
-#define LogInteger(integer) Log(@"%s : %ld", #integer, (long) integer)
-#define LogFloat(float)     Log(@"%s : %f", #float, float)
-#define LogBool(Bool)       Log(@"%s : %@", #Bool, (Bool ? @"YES" : @"NO"))
-#endif
+#define CLLogBounds(view)     CLLog(@"%s bounds: %@", #view, NSStringFromCGRect([view bounds]))
+#define CLLogFrame(view)      CLLog(@"%s frame: %@", #view, NSStringFromCGRect([view frame]))
+#define CLLogRect(rect)       CLLog(@"%s : %@", #rect, NSStringFromCGRect(rect))
+#define CLLogSize(size)       CLLog(@"%s : %@", #size, NSStringFromCGSize(size))
+#define CLLogPoint(point)     CLLog(@"%s : %@", #point, NSStringFromCGPoint(point))
+#define CLLogString(str)      CLLog(@"%s : %@", #str, str)
+#define CLLogObj(obj)         CLLog(@"%s : %@", #obj, obj)
+#define CLLogInteger(integer) CLLog(@"%s : %ld", #integer, (long) integer)
+#define CLLogFloat(float)     CLLog(@"%s : %f", #float, float)
+#define CLLogBool(Bool)       CLLog(@"%s : %@", #Bool, (Bool ? @"YES" : @"NO"))
 
 #pragma mark =================== 系统判断 ===================
 #define CLKit_IOS_VERSION [UIDevice currentDevice].systemVersion
@@ -101,98 +100,21 @@
 #define CLKit_SafeAreaTopHeight UIApplication.sharedApplication.statusBarFrame.size.height + 44
 
 // TODO: 获取屏幕宽度和高度
-#define CLKit_SCREEN_WIDTH                                                                                                                                                                            \
-((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) \
-     ? [[UIScreen mainScreen] bounds].size.width                                                                                                                                                      \
-     : [[UIScreen mainScreen] bounds].size.height)
-#define CLKit_SCREEN_HEIGHT                                                                                                                                                                           \
-((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) \
-     ? [[UIScreen mainScreen] bounds].size.height                                                                                                                                                     \
-     : [[UIScreen mainScreen] bounds].size.width)
+#define CLKit_SCREEN_WIDTH                                                                                  \
+    ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) ||         \
+      ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) \
+         ? [[UIScreen mainScreen] bounds].size.width                                                        \
+         : [[UIScreen mainScreen] bounds].size.height)
+#define CLKit_SCREEN_HEIGHT                                                                                 \
+    ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) ||         \
+      ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) \
+         ? [[UIScreen mainScreen] bounds].size.height                                                       \
+         : [[UIScreen mainScreen] bounds].size.width)
 
 #pragma mark ===================weakSelf===================
-#define CLKit_WeakSelf   @CLKit_Weakify(self);
-#define CLKit_StrongSelf @CLKit_Strongify(self);
 
-/*！
- * 强弱引用转换，用于解决代码块（block）与强引用self之间的循环引用问题
- * 调用方式: `@CLKit_Weakify`实现弱引用转换，`@CLKit_Strongify`实现强引用转换
- *
- * 示例：
- * @CLKit_Weakify
- * [obj block:^{
- * @strongify_self
- * self.property = something;
- * }];
- */
-#ifndef CLKit_Weakify
-#if DEBUG
-    #if __has_feature(objc_arc)
-        #define CLKit_Weakify(object) \
-            autoreleasepool { }       \
-            __weak __typeof__(object) weak##_##object = object;
-    #else
-        #define CLKit_Weakify(object) \
-            autoreleasepool { }       \
-            __block __typeof__(object) block##_##object = object;
-    #endif
-#else
-    #if __has_feature(objc_arc)
-        #define CLKit_Weakify(object) \
-            try {                     \
-            } @finally {              \
-            }                         \
-            { }                       \
-            __weak __typeof__(object) weak##_##object = object;
-    #else
-        #define CLKit_Weakify(object) \
-            try {                     \
-            } @finally {              \
-            }                         \
-            { }                       \
-            __block __typeof__(object) block##_##object = object;
-    #endif
-#endif
-#endif
-
-/*！
- * 强弱引用转换，用于解决代码块（block）与强引用对象之间的循环引用问题
- * 调用方式: `@CLKit_Weakify(object)`实现弱引用转换，`@CLKit_Strongify(object)`实现强引用转换
- *
- * 示例：
- * @CLKit_Weakify(object)
- * [obj block:^{
- * @CLKit_Strongify(object)
- * strong_object = something;
- * }];
- */
-#ifndef CLKit_Strongify
-#if DEBUG
-    #if __has_feature(objc_arc)
-        #define CLKit_Strongify(object) \
-            autoreleasepool { }         \
-            __typeof__(object) object = weak##_##object;
-    #else
-        #define CLKit_Strongify(object) \
-            autoreleasepool { }         \
-            __typeof__(object) object = block##_##object;
-    #endif
-#else
-    #if __has_feature(objc_arc)
-        #define CLKit_Strongify(object) \
-            try {                       \
-            } @finally {                \
-            }                           \
-            __typeof__(object) object = weak##_##object;
-    #else
-        #define CLKit_Strongify(object) \
-            try {                       \
-            } @finally {                \
-            }                           \
-            __typeof__(object) object = block##_##object;
-    #endif
-#endif
-#endif
+#define CLKit_WeakSelf(type)   __weak typeof(type) weak##type = type;
+#define CLKit_StrongSelf(type) __strong typeof(type) type = weak##type;
 
 #pragma mark ===================缩写方法===================
 #define CLKit_ImageName(imageName) [UIImage imageNamed:imageName]
@@ -215,9 +137,9 @@
 #define CLKit_ISEmptyString(str)  ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO)
 #define CLKit_ISEmptyArray(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0 || [array isEqual:[NSNull null]])
 #define CLKit_ISEmptyDict(dic)    (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0 || [dic isEqual:[NSNull null]])
-#define CLKit_ISEmptyObject(_object)                                                                                                                 \
-(_object == nil || [_object isKindOfClass:[NSNull class]] || ([_object respondsToSelector:@selector(length)] && [(NSData *) _object length] == 0) || \
- ([_object respondsToSelector:@selector(count)] && [(NSArray *) _object count] == 0))
+#define CLKit_ISEmptyObject(_object)                                                                                                                     \
+    (_object == nil || [_object isKindOfClass:[NSNull class]] || ([_object respondsToSelector:@selector(length)] && [(NSData *) _object length] == 0) || \
+     ([_object respondsToSelector:@selector(count)] && [(NSArray *) _object count] == 0))
 
 // APP对象 （单例对象）
 #define CLKit_SharedApplication [UIApplication sharedApplication]
@@ -242,7 +164,7 @@
 #define CLKit_RGBColor(r, g, b)     [UIColor colorWithRed:(r) / 255.0f green:(g) / 255.0f blue:(b) / 255.0f alpha:1.0]
 #define CLKit_RGBAColor(r, g, b, a) [UIColor colorWithRed:(r) / 255.0f green:(g) / 255.0f blue:(b) / 255.0f alpha:a]
 #define CLKit_RGBColor16Value(rgbValue) \
-[UIColor colorWithRed:((float) ((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float) ((rgbValue & 0xFF00) >> 8)) / 255.0 blue:((float) (rgbValue & 0xFF)) / 255.0 alpha:1.0]
+    [UIColor colorWithRed:((float) ((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float) ((rgbValue & 0xFF00) >> 8)) / 255.0 blue:((float) (rgbValue & 0xFF)) / 255.0 alpha:1.0]
 
 // clear背景颜色
 #define CLKit_ClearColor [UIColor clearColor]
@@ -251,4 +173,4 @@
 #define CLKit_DegreeFrom(radian)  (radian * 180.0) / (M_PI)
 #define CLKit_GetImage(imageName) [UIImage imageNamed:imageName]
 
-#endif /* CLKitMacroFile_h */
+#endif /* CLKitUtilsMacroFiles_h */

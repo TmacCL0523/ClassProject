@@ -5,17 +5,19 @@ inhibit_all_warnings!
 target 'BaseObject' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  pod 'AFNetworking'
+  pod 'CocoaAsyncSocket'
+  pod 'SocketRocket'
+  pod 'MBProgressHUD'
+  pod 'YYCache'
+  pod 'YYModel'
+  pod 'MJRefresh'
+  pod 'DZNEmptyDataSet'
+  pod 'Masonry'
+  pod 'SDWebImage'
+  pod 'KJEmitterView'
 
   # Pods for BaseObject
 #pod 'CLKitHelp'
   
-  post_install do |installer|
-    installer.pods_project.targets.each do |target|
-   target.build_configurations.each do |config|
-    if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 9.0
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
-       end
-     end
-    end
-  end
 end

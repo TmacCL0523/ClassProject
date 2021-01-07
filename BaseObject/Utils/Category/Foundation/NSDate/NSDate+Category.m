@@ -56,7 +56,12 @@ static const unsigned componentFlags = (NSCalendarUnitYear | NSCalendarUnitMonth
 /// 周
 - (NSInteger)week {
     NSDateComponents *components = [[NSDate currentCalendar] components:componentFlags fromDate:self];
+// 消除方法弃用(过时)的警告
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    // 要消除警告的代码
     return components.week;
+#pragma clang diagnostic pop
 }
 
 /// 周几 - 周日为1
@@ -232,12 +237,16 @@ static const unsigned componentFlags = (NSCalendarUnitYear | NSCalendarUnitMonth
 - (BOOL)isSameWeekAsDate:(NSDate *)aDate {
     NSDateComponents *components1 = [[NSDate currentCalendar] components:componentFlags fromDate:self];
     NSDateComponents *components2 = [[NSDate currentCalendar] components:componentFlags fromDate:aDate];
-
+// 消除方法弃用(过时)的警告
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    // 要消除警告的代码
     if( components1.week != components2.week )
         return NO;
 
     // Must have a time interval under 1 week. Thanks @aclark
     return (fabs([self timeIntervalSinceDate:aDate]) < D_WEEK);
+#pragma clang diagnostic pop
 }
 
 /// 周 - 是否本周

@@ -34,6 +34,9 @@
     [self.bgView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+
+    CLLogString(@"123123");
+    CLLogBool(NO);
 }
 
 -(void)viewWillAppear:(BOOL)animated
