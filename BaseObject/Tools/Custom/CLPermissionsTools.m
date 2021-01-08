@@ -196,23 +196,27 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         // 要消除警告的代码
-        [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert)
-                                                                            completionHandler:^(BOOL granted, NSError *_Nullable error) {
-                                                                                dispatch_async(dispatch_get_main_queue(), ^{
-                                                                                    // do something
-                                                                                    // 对granted 进行判断，是否允许权限
+        if( @available(iOS 10.0, *) ) {
+            [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert)
+                                                                                completionHandler:^(BOOL granted, NSError *_Nullable error) {
+                                                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                                                        // do something
+                                                                                        // 对granted 进行判断，是否允许权限
 
-                                                                                    if( granted ) {
-                                                                                        if( authBlock ) {
-                                                                                            authBlock();
+                                                                                        if( granted ) {
+                                                                                            if( authBlock ) {
+                                                                                                authBlock();
+                                                                                            }
+                                                                                        } else {
+                                                                                            if( notAuthBlock ) {
+                                                                                                notAuthBlock();
+                                                                                            }
                                                                                         }
-                                                                                    } else {
-                                                                                        if( notAuthBlock ) {
-                                                                                            notAuthBlock();
-                                                                                        }
-                                                                                    }
-                                                                                });
-                                                                            }];
+                                                                                    });
+                                                                                }];
+        } else {
+            // Fallback on earlier versions
+        }
 #pragma clang diagnostic pop
 
     } else if( [[UIDevice currentDevice].systemVersion floatValue] >= 8.0 ) {

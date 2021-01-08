@@ -2,15 +2,15 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDictionary+SafeOperate.m
+ * 文件名:     NSDictionary+cl_SafeOperate.m
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
  */
 
-#import "NSDictionary+SafeOperate.h"
+#import "NSDictionary+cl_SafeOperate.h"
 
-@implementation NSDictionary (SafeOperate)
+@implementation NSDictionary (cl_SafeOperate)
 /// 取值
 /// @param key 关键字
 - (BOOL)cl_hasKey:(NSString *)key {
@@ -310,7 +310,7 @@
 }
 @end
 
-@implementation NSMutableDictionary (SafeOperate)
+@implementation NSMutableDictionary (cl_SafeOperate)
 
 /// 写入类型 - ID
 /// @param object 元素

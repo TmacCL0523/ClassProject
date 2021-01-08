@@ -2,7 +2,7 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSObject+Category.h
+ * 文件名:     NSObject+cl_Category.h
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Category)
+@interface NSObject (cl_Category)
 
 /**
  * Function: 版本号
@@ -126,6 +126,5 @@
  * Function: 清楚缓存
  */
 - (void)cl_CleanCache;
-
 
 @end

@@ -2,7 +2,7 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDictionary+SafeOperate.h
+ * 文件名:     NSDictionary+cl_SafeOperate.h
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface NSDictionary (SafeOperate)
+@interface NSDictionary (cl_SafeOperate)
 
 /// 取值
 /// @param key 关键字
@@ -108,7 +108,7 @@
 
 @end
 
-@interface NSMutableDictionary (SafeOperate)
+@interface NSMutableDictionary (cl_SafeOperate)
 
 /// 写入类型 - ID
 /// @param object 元素

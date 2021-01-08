@@ -14,16 +14,10 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - AgoraRtcEngine_iOS (3.2.1)
+  - AgoraRtm_iOS (1.4.2)
   - CocoaAsyncSocket (7.6.5)
   - DZNEmptyDataSet (1.8.1)
-  - KJEmitterView (6.0.0):
-    - KJEmitterView/Handler (= 6.0.0)
-    - KJExtensionHandler
-  - KJEmitterView/Handler (6.0.0):
-    - KJExtensionHandler
-  - KJExtensionHandler (1.0.7):
-    - KJExtensionHandler/Kit (= 1.0.7)
-  - KJExtensionHandler/Kit (1.0.7)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
@@ -31,51 +25,84 @@ PODS:
     - SDWebImage/Core (= 5.10.0)
   - SDWebImage/Core (5.10.0)
   - SocketRocket (0.5.1)
+  - UMCommon (7.2.5):
+    - UMDevice
+  - UMDevice (1.1.0)
+  - UMShare/Core (6.10.1):
+    - UMCommon
+  - UMShare/Social/QQ (6.10.1):
+    - UMCommon
+    - UMShare/Core
+    - UMShare/Social/ReducedQQ
+  - UMShare/Social/ReducedQQ (6.10.1):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/ReducedWeChat (6.10.1):
+    - UMCommon
+    - UMShare/Core
+  - UMShare/Social/WeChat (6.10.1):
+    - UMCommon
+    - UMShare/Core
+    - UMShare/Social/ReducedWeChat
+  - UMShare/UI (6.10.1):
+    - UMCommon
+    - UMShare/Core
   - YYCache (1.0.4)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
+  - AgoraRtcEngine_iOS
+  - AgoraRtm_iOS
   - CocoaAsyncSocket
   - DZNEmptyDataSet
-  - KJEmitterView
   - Masonry
   - MBProgressHUD
   - MJRefresh
   - SDWebImage
   - SocketRocket
+  - UMCommon
+  - UMShare/Social/QQ
+  - UMShare/Social/WeChat
+  - UMShare/UI
   - YYCache
   - YYModel
 
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - AgoraRtcEngine_iOS
+    - AgoraRtm_iOS
     - CocoaAsyncSocket
     - DZNEmptyDataSet
-    - KJEmitterView
-    - KJExtensionHandler
     - Masonry
     - MBProgressHUD
     - MJRefresh
     - SDWebImage
     - SocketRocket
+    - UMCommon
+    - UMDevice
+    - UMShare
     - YYCache
     - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AgoraRtcEngine_iOS: bf8ee53108d31dd9e3b7e448701b9098162c42c7
+  AgoraRtm_iOS: 5fb55028ec41659a8d88bebecc5c95a742102d4f
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  KJEmitterView: b2f4eeda70c23cced8c46d53186ff9f6b8a7694d
-  KJExtensionHandler: 54dbf15a960470e4db0adb2aec4af019ce846c9e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  UMCommon: b5aabdb9fad44330ff8738d9bc46ebf93db14bf2
+  UMDevice: 28d21a568c8e8322e5a03bbd53b138d0c098d3b3
+  UMShare: a66bb29a997019639fa5508409b09adb42b88680
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 61046005bc41f9f484a082e1983f8920c95c3387
+PODFILE CHECKSUM: c1b1d9a0bbe425f2d35e1fdefdd7f0ad25684e15
 
 COCOAPODS: 1.10.0

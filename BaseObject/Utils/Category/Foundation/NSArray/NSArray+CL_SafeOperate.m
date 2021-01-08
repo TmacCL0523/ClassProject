@@ -1,16 +1,16 @@
-/**
+/*
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSArray+SafeOperate.m
+ * 文件名:     NSArray+CL_SafeOperate.m
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
- **/
+ */
 
-#import "NSArray+SafeOperate.h"
+#import "NSArray+CL_SafeOperate.h"
 
-@implementation NSArray (SafeOperate)
+@implementation NSArray (CL_SafeOperate)
 
 /// 获取元素
 /// @param index 下标
@@ -292,7 +292,7 @@
 }
 @end
 
-@implementation NSMutableArray (SafeOperate)
+@implementation NSMutableArray (CL_SafeOperate)
 
 /// 添加类型 - ID
 /// @param object 元素

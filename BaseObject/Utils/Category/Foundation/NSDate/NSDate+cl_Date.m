@@ -2,18 +2,18 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDate+Category.m
+ * 文件名:     NSDate+cl_Date.m
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
  */
 
-#import "NSDate+Category.h"
+#import "NSDate+cl_Date.h"
 
 static const unsigned componentFlags = (NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitHour |
                                         NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal);
 
-@implementation NSDate (Category)
+@implementation NSDate (cl_Date)
 #pragma mark ===================属性===================
 
 - (NSInteger)nearestHour {

@@ -2,13 +2,14 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDate+Category.h
+ * 文件名:     NSDate+cl_Date.h
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
  */
 
 #import <Foundation/Foundation.h>
+
 #define D_MINUTE 60
 #define D_HOUR   3600
 #define D_DAY    86400
@@ -19,8 +20,7 @@
 #define D_HM     @"HH:mm"
 #define D_HMS    @"HH:mm:ss"
 
-@interface NSDate (Category)
-#pragma mark ================属性=================
+@interface NSDate (cl_Date)
 
 /// 最近的小时
 @property (readonly) NSInteger nearestHour;

@@ -10,7 +10,6 @@
 
 #ifndef CLKitConst_h
 #define CLKitConst_h
-#import <Foundation/Foundation.h>
 
 /**
  *  yyyy-MM-dd
@@ -97,74 +96,6 @@ static NSString *const FormatString_HM = @"HH:mm";
  */
 static NSString *const FormatString_HMS = @"HH:mm:ss";
 
-/**
- * Function: WIFI设置界面
- */
-static NSString *const SystemSetting_WIFI = @"App-Prefs:root=WIFI";
 
-/**
- * Function: 关于设置界面
- */
-static NSString *const SystemSetting_About = @"App-Prefs:root=General&path=About";
-
-/**
- * Function: 辅助功能界面
- */
-static NSString *const SystemSetting_Accessibility = @"App-Prefs:root=General&path=ACCESSIBILITY";
-
-/**
- * Function: 飞行模式界面
- */
-static NSString *const SystemSetting_AirplaneModeOn = @"App-Prefs:root=AIRPLANE_MODE";
-
-/**
- * Function: 自动锁屏时间界面
- */
-static NSString *const SystemSetting_AutoLock = @"App-Prefs:root=General&path=AUTOLOCK";
-
-/**
- * Function: 自动锁定界面
- */
-static NSString *const SystemSetting_Brightness = @"App-Prefs:root=Brightness";
-
-/**
- * Function: 麦克风界面
- */
-static NSString *const SystemSetting_MICROPHONE = @"App-Prefs:root=Privacy&path=MICROPHONE";
-
-/**
- * Function: 通讯录界面
- */
-static NSString *const SystemSetting_CONTACTS = @"App-Prefs:root=Privacy&path=CONTACTS";
-
-/**
- * Function: 蓝牙界面
- */
-static NSString *const SystemSetting_Bluetooth = @"App-Prefs:root=Bluetooth";
-
-/**
- * Function: 日期和时间界面
- */
-static NSString *const SystemSetting_Date_And_Time = @"App-Prefs:root=General&path=DATE_AND_TIME";
-
-/**
- * Function: FaceTime界面
- */
-static NSString *const SystemSetting_FaceTime = @"App-Prefs:root=FACETIME";
-
-/**
- * Function: General界面
- */
-static NSString *const SystemSetting_General = @"App-Prefs:root=General";
-
-/**
- * Function: Keyboard界面
- */
-static NSString *const SystemSetting_Keyboard = @"App-Prefs:root=General&path=Keyboard";
-
-/**
- * Function: iCloud界面
- */
-static NSString *const SystemSetting_iCloud = @"App-Prefs:root=CASTLE";
 
 #endif /* CLKitConst_h */

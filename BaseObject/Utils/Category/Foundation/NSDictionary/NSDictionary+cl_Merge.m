@@ -2,15 +2,16 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDictionary+Merge.m
+ * 文件名:     NSDictionary+cl_Merge.m
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
  */
 
-#import "NSDictionary+Merge.h"
+#import "NSDictionary+cl_Merge.h"
 
-@implementation NSDictionary (Merge)
+@implementation NSDictionary (cl_Merge)
+
 /// 创建字典 - 根据2个字典合并成一个新的字典
 /// @param dict1 字典1
 /// @param dict2 字典2
@@ -43,4 +44,5 @@
 - (NSDictionary *)cl_dictionaryByMergingWith:(NSDictionary *)dict {
     return [[self class] cl_createDictionaryByMerging:self with:dict];
 }
+
 @end

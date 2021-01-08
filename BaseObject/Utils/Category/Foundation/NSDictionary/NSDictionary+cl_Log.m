@@ -2,44 +2,58 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSArray+LogUTF8String.m
+ * 文件名:     NSDictionary+cl_Log.m
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
  */
 
-#import "NSArray+LogUTF8String.h"
+#import "NSDictionary+cl_Log.h"
 
-@implementation NSArray (LogUTF8String)
-
+@implementation NSDictionary (cl_Log)
 #ifdef DEBUG
 
 - (NSString *)description {
     return [self descriptionWithLevel:1];
 }
 
-- (NSString *)descriptionWithLocale:(id)locale {
+- (NSString *)descriptionWithLocale:(nullable id)locale {
     return [self descriptionWithLevel:1];
 }
-
 - (NSString *)descriptionWithLocale:(nullable id)locale indent:(NSUInteger)level {
     return [self descriptionWithLevel:(int) level];
 }
 
 /**
- 将数组转化成字符串，文字格式UTF8,并且格式化
+ * 非字典时，会引发崩溃
+ */
+- (NSString *)getUTF8String {
+    if( [self isKindOfClass:[NSDictionary class]] == NO ) {
+        return @"";
+    }
+    NSError *error = nil;
+    NSData * data  = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
+    if( error ) {
+        return @"";
+    }
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return str;
+}
 
- @param level 当前数组的层级，最少为 1，代表最外层
+/**
+ 将字典转化成字符串，文字格式UTF8,并且格式化
+
+ @param level 当前字典的层级，最少为 1，代表最外层字典
  @return 格式化的字符串
  */
 - (NSString *)descriptionWithLevel:(int)level {
     NSString *       subSpace  = [self getSpaceWithLevel:level];
     NSString *       space     = [self getSpaceWithLevel:level - 1];
     NSMutableString *retString = [[NSMutableString alloc] init];
-    // 1、添加 [
-    [retString appendString:[NSString stringWithFormat:@"["]];
-    // 2、添加 value
-    [self enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+    // 1、添加 {
+    [retString appendString:[NSString stringWithFormat:@"{"]];
+    // 2、添加 key : value;
+    [self enumerateKeysAndObjectsUsingBlock:^(id _Nonnull key, id _Nonnull obj, BOOL *_Nonnull stop) {
         if( [obj isKindOfClass:[NSString class]] ) {
             NSString *value = (NSString *) obj;
     // 消除方法弃用(过时)的警告
@@ -48,35 +62,35 @@
             // 要消除警告的代码
             value = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     #pragma clang diagnostic pop
-            NSString *subString = [NSString stringWithFormat:@"\n%@%@,", subSpace, value];
+            NSString *subString = [NSString stringWithFormat:@"\n%@%@ = %@,", subSpace, key, value];
             [retString appendString:subString];
-        } else if( [obj isKindOfClass:[NSArray class]] ) {
-            NSArray * arr = (NSArray *) obj;
-            NSString *str = [arr descriptionWithLevel:level + 1];
-            str           = [NSString stringWithFormat:@"\n%@%@,", subSpace, str];
-            [retString appendString:str];
         } else if( [obj isKindOfClass:[NSDictionary class]] ) {
             NSDictionary *dic = (NSDictionary *) obj;
-            NSString *    str = [dic descriptionWithLocale:nil indent:level + 1];
-            str               = [NSString stringWithFormat:@"\n%@%@,", subSpace, str];
+            NSString *    str = [dic descriptionWithLevel:level + 1];
+            str               = [NSString stringWithFormat:@"\n%@%@ = %@,", subSpace, key, str];
+            [retString appendString:str];
+        } else if( [obj isKindOfClass:[NSArray class]] ) {
+            NSArray * arr = (NSArray *) obj;
+            NSString *str = [arr descriptionWithLocale:nil indent:level + 1];
+            str           = [NSString stringWithFormat:@"\n%@%@ = %@,", subSpace, key, str];
             [retString appendString:str];
         } else {
-            NSString *subString = [NSString stringWithFormat:@"\n%@%@,", subSpace, obj];
+            NSString *subString = [NSString stringWithFormat:@"\n%@%@ = %@,", subSpace, key, obj];
             [retString appendString:subString];
         }
     }];
     if( [retString hasSuffix:@","] ) {
         [retString deleteCharactersInRange:NSMakeRange(retString.length - 1, 1)];
     }
-    // 3、添加 ]
-    [retString appendString:[NSString stringWithFormat:@"\n%@]", space]];
+    // 3、添加 }
+    [retString appendString:[NSString stringWithFormat:@"\n%@}", space]];
     return retString;
 }
 
 /**
  根据层级，返回前面的空格占位符
 
- @param level 层级
+ @param level 字典的层级
  @return 占位空格
  */
 - (NSString *)getSpaceWithLevel:(int)level {

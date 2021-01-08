@@ -2,15 +2,15 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDictionary+XML.m
+ * 文件名:     NSDictionary+cl_XML.m
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
  */
 
-#import "NSDictionary+XML.h"
+#import "NSDictionary+cl_XML.h"
 
-@implementation NSDictionary (XML)
+@implementation NSDictionary (cl_XML)
 
 /// 将NSDictionary转换成XML 字符串
 - (NSString *)cl_XMLString {

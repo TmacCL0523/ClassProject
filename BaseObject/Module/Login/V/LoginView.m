@@ -29,7 +29,7 @@
         btn.backgroundColor = UIColor.redColor;
         CLKit_WeakSelf(self);
         [btn cl_addTargerWithAction:^(UIButton *btn) {
-            [weakself cl_openSettingView:SystemSetting_General];
+//            [weakself cl_openSettingView:SystemSetting_General];
         }];
         [self addSubview:btn];
     }

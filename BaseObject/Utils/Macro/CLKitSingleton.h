@@ -12,87 +12,61 @@
 #define CLKitSingleton_h
 
 // TODO: .h 方法
-#define CLKit_SingletonH(methodName) +(instancetype) shared##methodName;
+#define CLKit_SingletonH(className)                               \
++(instancetype) shared##className;
 
-// .m文件的实现
-// 是ARC
+// 2. 解决.m文件
+// 判断 是否是 ARC
 #if __has_feature(objc_arc)
-    #define CLKit_SingletonM(methodName)                      \
-        static id _instace = nil;                             \
-        +(id) allocWithZone : (struct _NSZone *) zone {       \
-            if( _instace == nil ) {                           \
-                static dispatch_once_t onceToken;             \
-                dispatch_once(&onceToken, ^{                  \
-                    _instace = [super allocWithZone:zone];    \
-                });                                           \
-            }                                                 \
-            return _instace;                                  \
-        }                                                     \
-                                                              \
-        -(id) init {                                          \
-            static dispatch_once_t onceToken;                 \
-            dispatch_once(&onceToken, ^{                      \
-                _instace = [super init];                      \
-            });                                               \
-            return _instace;                                  \
-        }                                                     \
-                                                              \
-        +(instancetype) shared##methodName {                  \
-            return [[self alloc] init];                       \
-        }                                                     \
-        +(id) copyWithZone : (struct _NSZone *) zone {        \
-            return _instace;                                  \
-        }                                                     \
-                                                              \
-        +(id) mutableCopyWithZone : (struct _NSZone *) zone { \
-            return _instace;                                  \
+    #define CLKit_SingletonM(className)                           \
+        static id instance;                                       \
+        +(instancetype) allocWithZone : (struct _NSZone *) zone { \
+            static dispatch_once_t onceToken;                     \
+            dispatch_once(&onceToken, ^{                          \
+                instance = [super allocWithZone:zone];            \
+            });                                                   \
+            return instance;                                      \
+        }                                                         \
+        +(instancetype) shared##className {                       \
+            static dispatch_once_t onceToken;                     \
+            dispatch_once(&onceToken, ^{                          \
+                instance = [[self alloc] init];                   \
+            });                                                   \
+            return instance;                                      \
+        }                                                         \
+        -(id) copyWithZone : (NSZone *) zone {                    \
+            return instance;                                      \
         }
-
 #else
-    // 不是ARC
-    #define CLKit_SingletonM(methodName)                      \
-        static id _instace = nil;                             \
-        +(id) allocWithZone : (struct _NSZone *) zone {       \
-            if( _instace == nil ) {                           \
-                static dispatch_once_t onceToken;             \
-                dispatch_once(&onceToken, ^{                  \
-                    _instace = [super allocWithZone:zone];    \
-                });                                           \
-            }                                                 \
-            return _instace;                                  \
-        }                                                     \
-                                                              \
-        -(id) init {                                          \
-            static dispatch_once_t onceToken;                 \
-            dispatch_once(&onceToken, ^{                      \
-                _instace = [super init];                      \
-            });                                               \
-            return _instace;                                  \
-        }                                                     \
-                                                              \
-        +(instancetype) shared##methodName {                  \
-            return [[self alloc] init];                       \
-        }                                                     \
-                                                              \
-        -(oneway void) release {                              \
-                                                              \
-        }                                                     \
-                                                              \
-            - (id) retain {                                   \
-            return self;                                      \
-        }                                                     \
-                                                              \
-        -(NSUInteger) retainCount {                           \
-            return 1;                                         \
-        }                                                     \
-        +(id) copyWithZone : (struct _NSZone *) zone {        \
-            return _instace;                                  \
-        }                                                     \
-                                                              \
-        +(id) mutableCopyWithZone : (struct _NSZone *) zone { \
-            return _instace;                                  \
+    // MRC 部分
+    #define CLKit_SingletonM(className)                 \
+        static id instance;                                       \
+        +(instancetype) allocWithZone : (struct _NSZone *) zone { \
+            static dispatch_once_t onceToken;                     \
+            dispatch_once(&onceToken, ^{                          \
+                instance = [super allocWithZone:zone];            \
+            });                                                   \
+            return instance;                                      \
+        }                                                         \
+        +(instancetype) shared##className {                       \
+            static dispatch_once_t onceToken;                     \
+            dispatch_once(&onceToken, ^{                          \
+                instance = [[self alloc] init];                   \
+            });                                                   \
+            return instance;                                      \
+        }                                                         \
+        -(id) copyWithZone : (NSZone *) zone {                    \
+            return instance;                                      \
+        }                                                         \
+        -(oneway void) release {} - (instancetype) retain {       \
+            return instance;                                      \
+        }                                                         \
+        -(instancetype) autorelease {                             \
+            return instance;                                      \
+        }                                                         \
+        -(NSUInteger) retainCount {                               \
+            return ULONG_MAX;                                     \
         }
-
-#endif
+#endif // 提示，最后一行不要使用
 
 #endif /* CLKitSingleton_h */

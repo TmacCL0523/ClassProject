@@ -2,15 +2,16 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSDictionary+URL.m
+ * 文件名:     NSDictionary+cl_URL.m
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
  */
 
-#import "NSDictionary+URL.h"
+#import "NSDictionary+cl_URL.h"
 
-@implementation NSDictionary (URL)
+@implementation NSDictionary (cl_URL)
+
 /// 字典转json字符串
 - (NSString *)cl_dictionaryToJson {
     return [NSDictionary cl_dictionaryToJson:self];
@@ -32,4 +33,5 @@
         return error.localizedDescription;
     }
 }
+
 @end

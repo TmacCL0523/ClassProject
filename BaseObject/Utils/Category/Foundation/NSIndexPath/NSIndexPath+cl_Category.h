@@ -2,7 +2,7 @@
  *********************************************************************************
  *
  * 用户名:     hcl
- * 文件名:     NSIndexPath+Category.m
+ * 文件名:     NSIndexPath+cl_Category.h
  * 创建时间:    2020-12-29
  *
  *********************************************************************************
@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSIndexPath (Category)
+@interface NSIndexPath (cl_Category)
 
 /**
  * Function: 上一个Row

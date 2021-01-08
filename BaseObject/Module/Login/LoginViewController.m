@@ -13,34 +13,29 @@
 #import "LoginViewController.h"
 #import "LoginView.h"
 
-@interface LoginViewController ()
-@property (nonatomic , strong) LoginView *bgView;
+@interface
+                                         LoginViewController ()
+@property (nonatomic, strong) LoginView *bgView;
 @end
 
 @implementation LoginViewController
 #pragma mark ===================    LifeCycle   ===================
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"登录";
+    self.title                = @"登录";
     self.view.backgroundColor = UIColor.whiteColor;
     [self createViews];
-    
 }
--(void)createViews
-{
+- (void)createViews {
     [self.view addSubview:self.bgView];
     [self.bgView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-
-    CLLogString(@"123123");
-    CLLogBool(NO);
+    CLLogBool([CLPermissionsTools cl_permissionsLocation]);
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
 }
@@ -51,9 +46,8 @@
 #pragma mark ===================    Private   ===================
 
 #pragma mark ===================    Setter/Getter   ===================
-- (LoginView *)bgView
-{
-    if (!_bgView) {
+- (LoginView *)bgView {
+    if( ! _bgView ) {
         _bgView = [LoginView new];
     }
     return _bgView;

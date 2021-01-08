@@ -15,7 +15,19 @@ target 'BaseObject' do
   pod 'DZNEmptyDataSet'
   pod 'Masonry'
   pod 'SDWebImage'
-  pod 'KJEmitterView'
+
+#  友盟分享&登录
+  pod 'UMCommon'
+  pod 'UMShare/UI'
+  pod 'UMShare/Social/WeChat'
+  pod 'UMShare/Social/QQ'
+# 直播&通话&IM
+# /*视频通话、直播SDK*/
+  pod 'AgoraRtcEngine_iOS'
+# /*语音通话、直播SDK*/
+#  pod 'AgoraAudio_iOS'
+# /*即时通讯IM*/
+  pod 'AgoraRtm_iOS'
 
   # Pods for BaseObject
 #pod 'CLKitHelp'
