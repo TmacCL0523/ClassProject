@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  BaseObject
+//
+//  Created by QiYue on 2020/12/14.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AppConst.h"
+
+//#define MAS_SHORTHAND
+//#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+#import "CLKitHeaderFile.h"
+#import "CLToolsFiles.h"
+
+#endif /* PrefixHeader_pch */
