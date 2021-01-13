@@ -10,4 +10,13 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ *  友盟SDK key
+ */
 extern NSString* __nonnull const UMAPPSDKKey;
+
+/**
+ *  极光推送SDK key
+ */
+extern NSString* __nonnull const JPushAPPSDKKey;

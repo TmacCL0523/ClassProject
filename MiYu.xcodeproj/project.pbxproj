@@ -16,6 +16,7 @@
 		1367DA482574E74300A8C8F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367DA472574E74300A8C8F9 /* Assets.xcassets */; };
 		1367DA4E2574E74300A8C8F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1367DA4D2574E74300A8C8F9 /* main.m */; };
 		1367DA6D2574EDD500A8C8F9 /* AppDelegate+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 1367DA6C2574EDD500A8C8F9 /* AppDelegate+Config.m */; };
+		1368B9E925AECBAF00BD2DA0 /* AppDelegate+PushConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1368B9E825AECBAF00BD2DA0 /* AppDelegate+PushConfig.m */; };
 		13763BDD258719A8007640D2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13763BDC258719A8007640D2 /* LoginViewController.m */; };
 		13763BE025871AA9007640D2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13763BDF25871AA9007640D2 /* Launch Screen.storyboard */; };
 		138A7F6625A41469001D4730 /* UIView+cl_Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 138A7F6525A41469001D4730 /* UIView+cl_Screenshot.m */; };
@@ -59,7 +60,7 @@
 		13F3147925AC316A004B5355 /* UIButton+cl_Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F3147825AC316A004B5355 /* UIButton+cl_Action.m */; };
 		13F3147E25AC31DC004B5355 /* UIButton+cl_Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F3147D25AC31DC004B5355 /* UIButton+cl_Create.m */; };
 		13F3148325AC3224004B5355 /* UIButton+cl_ImagePostion.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F3148225AC3224004B5355 /* UIButton+cl_ImagePostion.m */; };
-		CE1BBC8B62B6095F15E138B9 /* libPods-MiYu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1A14EFE60C160C091E60E8 /* libPods-MiYu.a */; };
+		9104F33B70E23C5A5A6847C6 /* Pods_MiYu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BF5834DEFC99DB707FB6C /* Pods_MiYu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,9 @@
 		1367DA4D2574E74300A8C8F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1367DA6B2574EDD500A8C8F9 /* AppDelegate+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Config.h"; sourceTree = "<group>"; };
 		1367DA6C2574EDD500A8C8F9 /* AppDelegate+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Config.m"; sourceTree = "<group>"; };
+		1368B9E725AECBAF00BD2DA0 /* AppDelegate+PushConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+PushConfig.h"; sourceTree = "<group>"; };
+		1368B9E825AECBAF00BD2DA0 /* AppDelegate+PushConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PushConfig.m"; sourceTree = "<group>"; };
+		1368BA1625AED6A300BD2DA0 /* MiYu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiYu.entitlements; sourceTree = "<group>"; };
 		137388A9259B2D0900FEDC27 /* CLKitSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitSingleton.h; sourceTree = "<group>"; };
 		13763B7D258713FD007640D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		13763BDB258719A8007640D2 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -184,7 +188,7 @@
 		13F3148125AC3224004B5355 /* UIButton+cl_ImagePostion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+cl_ImagePostion.h"; sourceTree = "<group>"; };
 		13F3148225AC3224004B5355 /* UIButton+cl_ImagePostion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+cl_ImagePostion.m"; sourceTree = "<group>"; };
 		148997D44D4DDBBC73A3E98A /* Pods-MiYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiYu.debug.xcconfig"; path = "Target Support Files/Pods-MiYu/Pods-MiYu.debug.xcconfig"; sourceTree = "<group>"; };
-		BB1A14EFE60C160C091E60E8 /* libPods-MiYu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MiYu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		692BF5834DEFC99DB707FB6C /* Pods_MiYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD16217C7CBFF6CCD08E8B33 /* Pods-MiYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiYu.release.xcconfig"; path = "Target Support Files/Pods-MiYu/Pods-MiYu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1BBC8B62B6095F15E138B9 /* libPods-MiYu.a in Frameworks */,
+				9104F33B70E23C5A5A6847C6 /* Pods_MiYu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +232,7 @@
 			children = (
 				1367DA3A2574E74100A8C8F9 /* 蜜语 */,
 				26F048C77AE1AD0C7A0B02D6 /* Frameworks */,
+				1368BA1625AED6A300BD2DA0 /* MiYu.entitlements */,
 				E970391399AD9639AC406128 /* Pods */,
 				1367DA392574E74100A8C8F9 /* Products */,
 			);
@@ -301,6 +306,8 @@
 				1367DA3C2574E74100A8C8F9 /* AppDelegate.m */,
 				1367DA6B2574EDD500A8C8F9 /* AppDelegate+Config.h */,
 				1367DA6C2574EDD500A8C8F9 /* AppDelegate+Config.m */,
+				1368B9E725AECBAF00BD2DA0 /* AppDelegate+PushConfig.h */,
+				1368B9E825AECBAF00BD2DA0 /* AppDelegate+PushConfig.m */,
 			);
 			path = Appdelegate;
 			sourceTree = "<group>";
@@ -675,7 +682,7 @@
 		26F048C77AE1AD0C7A0B02D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB1A14EFE60C160C091E60E8 /* libPods-MiYu.a */,
+				692BF5834DEFC99DB707FB6C /* Pods_MiYu.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -844,6 +851,7 @@
 				13C43EAA25A85E6F00178795 /* NSArray+CL_SafeOperate.m in Sources */,
 				1358F95E25A7F59200B83500 /* CLShareTools.m in Sources */,
 				13C2D4EC25A2F217004DF9E5 /* NSString+Judge.m in Sources */,
+				1368B9E925AECBAF00BD2DA0 /* AppDelegate+PushConfig.m in Sources */,
 				13A7E2FE259C7B2D00949FD3 /* NSString+FileManager.m in Sources */,
 				1367DA4E2574E74300A8C8F9 /* main.m in Sources */,
 				13A7E2F6259C756100949FD3 /* NSString+TransForm.m in Sources */,
@@ -993,6 +1001,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MiYu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42UV2FRKWN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1015,6 +1024,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MiYu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42UV2FRKWN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -15,7 +15,14 @@
  * Function: 将APNS NSData类型token 格式化成字符串
  */
 - (NSString *)cl_APNSToken {
-    return [[[[self description] stringByReplacingOccurrencesOfString:@"<" withString:@""] stringByReplacingOccurrencesOfString:@">" withString:@""] stringByReplacingOccurrencesOfString:@" "
-                                                                                                                                                                               withString:@""];
+
+    NSMutableString *deviceTokenString1 = [NSMutableString string];
+       const char *bytes = self.bytes;
+       int iCount = self.length;
+       for (int i = 0; i < iCount; i++) {
+           [deviceTokenString1 appendFormat:@"%02x", bytes[i]&0x000000FF];
+       }
+
+    return deviceTokenString1;
 }
 @end

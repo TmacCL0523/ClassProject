@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Config.h"
+#import "AppDelegate+PushConfig.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+
+    [self registerJPusherWithOptions:launchOptions];
+    [self registerNotification];
     [self rootViewController];
+
+
     return YES;
 }
 
