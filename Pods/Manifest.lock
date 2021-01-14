@@ -16,7 +16,11 @@ PODS:
     - AFNetworking/NSURLSession
   - AgoraRtcEngine_iOS (3.2.1)
   - AgoraRtm_iOS (1.4.2)
+  - CYLTabBarController (1.29.0):
+    - CYLTabBarController/Core (= 1.29.0)
+  - CYLTabBarController/Core (1.29.0)
   - DZNEmptyDataSet (1.8.1)
+  - IQKeyboardManager (6.5.6)
   - JCore (2.4.0)
   - JPush (3.4.0):
     - JCore (< 3.0.0, >= 2.0.0)
@@ -26,6 +30,8 @@ PODS:
   - SDWebImage (5.10.2):
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
+  - TZImagePickerController (3.5.8)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
   - UMCommon (7.2.5):
     - UMDevice
   - UMCSecurityPlugins (1.0.6)
@@ -56,12 +62,16 @@ DEPENDENCIES:
   - AFNetworking
   - AgoraRtcEngine_iOS
   - AgoraRtm_iOS
+  - CYLTabBarController
   - DZNEmptyDataSet
+  - IQKeyboardManager
   - JPush
   - Masonry
   - MBProgressHUD
   - MJRefresh
   - SDWebImage
+  - TZImagePickerController
+  - "UITableView+FDTemplateLayoutCell"
   - UMCommon
   - UMCSecurityPlugins
   - UMShare/Social/QQ
@@ -75,13 +85,17 @@ SPEC REPOS:
     - AFNetworking
     - AgoraRtcEngine_iOS
     - AgoraRtm_iOS
+    - CYLTabBarController
     - DZNEmptyDataSet
+    - IQKeyboardManager
     - JCore
     - JPush
     - Masonry
     - MBProgressHUD
     - MJRefresh
     - SDWebImage
+    - TZImagePickerController
+    - "UITableView+FDTemplateLayoutCell"
     - UMCommon
     - UMCSecurityPlugins
     - UMDevice
@@ -93,13 +107,17 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   AgoraRtcEngine_iOS: bf8ee53108d31dd9e3b7e448701b9098162c42c7
   AgoraRtm_iOS: 5fb55028ec41659a8d88bebecc5c95a742102d4f
+  CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   JCore: a29e4b0ee54e1301446dc02d8e1c350404108b34
   JPush: defaa108c38806f6efdcfaf4c416854d25fca8e5
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  TZImagePickerController: 7fd9702897ef8c0b7c951e5463f4bcf398296f9e
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   UMCommon: b5aabdb9fad44330ff8738d9bc46ebf93db14bf2
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMDevice: 28d21a568c8e8322e5a03bbd53b138d0c098d3b3
@@ -107,6 +125,6 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b1a97c410896d76bc0873ccd18ff30fc4352d04d
+PODFILE CHECKSUM: dc8868cf3513dca57ae03b7474f647e384f7128b
 
 COCOAPODS: 1.10.0

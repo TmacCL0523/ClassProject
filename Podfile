@@ -13,6 +13,10 @@ target 'MiYu' do
   pod 'DZNEmptyDataSet'
   pod 'Masonry'
   pod 'SDWebImage'
+  pod 'IQKeyboardManager'
+  pod 'CYLTabBarController'
+  pod 'TZImagePickerController'  #照片选择浏览器
+  pod 'UITableView+FDTemplateLayoutCell'
 
 #  友盟分享&登录
   pod 'UMCommon'
@@ -20,17 +24,11 @@ target 'MiYu' do
   pod 'UMShare/Social/WeChat'
   pod 'UMShare/Social/QQ'
   pod 'UMCSecurityPlugins'
-  pod 'JPush' 
+  pod 'JPush'                   #极光推送
 
 # 直播&通话&IM
-# /*视频通话、直播SDK*/
-  pod 'AgoraRtcEngine_iOS'
-  pod 'AgoraRtm_iOS'
-# /*语音通话、直播SDK*/
-#  pod 'AgoraAudio_iOS'
-# /*即时通讯IM*/
+  pod 'AgoraRtcEngine_iOS'      #视频通话、直播SDK
+  pod 'AgoraRtm_iOS'            #即时通讯IM
 
-  # Pods for BaseObject
-#pod 'CLKitHelp'
   
 end

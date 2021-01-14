@@ -10,7 +10,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 
-@property (nonatomic , strong) UIWindow *customWindos;
+@property (nonatomic , strong) UIWindow *window;
 
 @end
 

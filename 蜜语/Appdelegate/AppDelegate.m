@@ -25,7 +25,7 @@
     [self registerNotification];
     [self rootViewController];
 
-
+    CLLogSize(CLKit_ScreenSize);
     return YES;
 }
 

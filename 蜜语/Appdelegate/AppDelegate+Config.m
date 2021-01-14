@@ -2,13 +2,17 @@
 
 #import "AppDelegate+Config.h"
 #import "LoginViewController.h"
+#import "MYTabbarViewController.h"
 
 @implementation AppDelegate (Config)
 
 - (void)rootViewController {
-    self.customWindos                    = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.customWindos.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
-    [self.customWindos makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.window                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor    = [UIColor whiteColor];
+    MYTabbarViewController *vc     = [[MYTabbarViewController alloc] init];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
 }
 /// 程序取消激活状态
 /// @param application app

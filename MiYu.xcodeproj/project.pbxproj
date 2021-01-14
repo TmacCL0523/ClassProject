@@ -34,6 +34,13 @@
 		13A7E2F6259C756100949FD3 /* NSString+TransForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2F5259C756100949FD3 /* NSString+TransForm.m */; };
 		13A7E2FA259C774700949FD3 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2F9259C774700949FD3 /* NSString+Encryption.m */; };
 		13A7E2FE259C7B2D00949FD3 /* NSString+FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7E2FD259C7B2D00949FD3 /* NSString+FileManager.m */; };
+		13A9603B25B03719006AA3A4 /* MYTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9603A25B03719006AA3A4 /* MYTabbarViewController.m */; };
+		13A9604525B04068006AA3A4 /* MYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9604425B04068006AA3A4 /* MYNavigationController.m */; };
+		13A9604E25B04164006AA3A4 /* MYFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9604D25B04164006AA3A4 /* MYFindViewController.m */; };
+		13A9605325B04170006AA3A4 /* MYHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9605225B04170006AA3A4 /* MYHomePageViewController.m */; };
+		13A9605725B0417A006AA3A4 /* MYLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9605625B0417A006AA3A4 /* MYLiveViewController.m */; };
+		13A9605B25B04184006AA3A4 /* MYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9605A25B04184006AA3A4 /* MYMeViewController.m */; };
+		13A9605F25B0418D006AA3A4 /* MYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9605E25B0418D006AA3A4 /* MYMessageViewController.m */; };
 		13B270CB25AC37D500FA7CAB /* UIImage+cl_Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B270CA25AC37D500FA7CAB /* UIImage+cl_Size.m */; };
 		13B270D025AC390D00FA7CAB /* UIImage+cl_Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B270CF25AC390D00FA7CAB /* UIImage+cl_Gif.m */; };
 		13B270D525AC394A00FA7CAB /* UIImage+cl_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B270D425AC394A00FA7CAB /* UIImage+cl_Color.m */; };
@@ -126,6 +133,20 @@
 		13A7E2FC259C7B2D00949FD3 /* NSString+FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FileManager.h"; sourceTree = "<group>"; };
 		13A7E2FD259C7B2D00949FD3 /* NSString+FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FileManager.m"; sourceTree = "<group>"; };
 		13A7E30B259C82C000949FD3 /* CLKitFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKitFoundation.h; sourceTree = "<group>"; };
+		13A9603925B03719006AA3A4 /* MYTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYTabbarViewController.h; sourceTree = "<group>"; };
+		13A9603A25B03719006AA3A4 /* MYTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYTabbarViewController.m; sourceTree = "<group>"; };
+		13A9604325B04068006AA3A4 /* MYNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYNavigationController.h; sourceTree = "<group>"; };
+		13A9604425B04068006AA3A4 /* MYNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYNavigationController.m; sourceTree = "<group>"; };
+		13A9604C25B04164006AA3A4 /* MYFindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYFindViewController.h; sourceTree = "<group>"; };
+		13A9604D25B04164006AA3A4 /* MYFindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYFindViewController.m; sourceTree = "<group>"; };
+		13A9605125B04170006AA3A4 /* MYHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYHomePageViewController.h; sourceTree = "<group>"; };
+		13A9605225B04170006AA3A4 /* MYHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYHomePageViewController.m; sourceTree = "<group>"; };
+		13A9605525B0417A006AA3A4 /* MYLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLiveViewController.h; sourceTree = "<group>"; };
+		13A9605625B0417A006AA3A4 /* MYLiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLiveViewController.m; sourceTree = "<group>"; };
+		13A9605925B04184006AA3A4 /* MYMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYMeViewController.h; sourceTree = "<group>"; };
+		13A9605A25B04184006AA3A4 /* MYMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYMeViewController.m; sourceTree = "<group>"; };
+		13A9605D25B0418D006AA3A4 /* MYMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYMessageViewController.h; sourceTree = "<group>"; };
+		13A9605E25B0418D006AA3A4 /* MYMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYMessageViewController.m; sourceTree = "<group>"; };
 		13B270C925AC37D500FA7CAB /* UIImage+cl_Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+cl_Size.h"; sourceTree = "<group>"; };
 		13B270CA25AC37D500FA7CAB /* UIImage+cl_Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+cl_Size.m"; sourceTree = "<group>"; };
 		13B270CE25AC390D00FA7CAB /* UIImage+cl_Gif.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+cl_Gif.h"; sourceTree = "<group>"; };
@@ -264,7 +285,12 @@
 		1367DA562574E75B00A8C8F9 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				13A9604925B04104006AA3A4 /* Find(发现) */,
+				13A9604725B040E5006AA3A4 /* HomePage(首页) */,
+				13A9604825B040F4006AA3A4 /* Live(直播) */,
 				1367DA672574E96C00A8C8F9 /* Login */,
+				13A9604B25B0411E006AA3A4 /* Me(我的) */,
+				13A9604A25B0410F006AA3A4 /* Message(消息) */,
 				1367DA662574E95600A8C8F9 /* Tabbar */,
 			);
 			path = Module;
@@ -393,6 +419,10 @@
 		1367DA662574E95600A8C8F9 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				13A9603925B03719006AA3A4 /* MYTabbarViewController.h */,
+				13A9603A25B03719006AA3A4 /* MYTabbarViewController.m */,
+				13A9604325B04068006AA3A4 /* MYNavigationController.h */,
+				13A9604425B04068006AA3A4 /* MYNavigationController.m */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -659,6 +689,51 @@
 			path = NSObject;
 			sourceTree = "<group>";
 		};
+		13A9604725B040E5006AA3A4 /* HomePage(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				13A9605125B04170006AA3A4 /* MYHomePageViewController.h */,
+				13A9605225B04170006AA3A4 /* MYHomePageViewController.m */,
+			);
+			path = "HomePage(首页)";
+			sourceTree = "<group>";
+		};
+		13A9604825B040F4006AA3A4 /* Live(直播) */ = {
+			isa = PBXGroup;
+			children = (
+				13A9605525B0417A006AA3A4 /* MYLiveViewController.h */,
+				13A9605625B0417A006AA3A4 /* MYLiveViewController.m */,
+			);
+			path = "Live(直播)";
+			sourceTree = "<group>";
+		};
+		13A9604925B04104006AA3A4 /* Find(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				13A9604C25B04164006AA3A4 /* MYFindViewController.h */,
+				13A9604D25B04164006AA3A4 /* MYFindViewController.m */,
+			);
+			path = "Find(发现)";
+			sourceTree = "<group>";
+		};
+		13A9604A25B0410F006AA3A4 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				13A9605D25B0418D006AA3A4 /* MYMessageViewController.h */,
+				13A9605E25B0418D006AA3A4 /* MYMessageViewController.m */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		13A9604B25B0411E006AA3A4 /* Me(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				13A9605925B04184006AA3A4 /* MYMeViewController.h */,
+				13A9605A25B04184006AA3A4 /* MYMeViewController.m */,
+			);
+			path = "Me(我的)";
+			sourceTree = "<group>";
+		};
 		13C2D4EE25A2FCFB004DF9E5 /* NSData */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,17 +906,21 @@
 				13C43EE525A866E600178795 /* NSObject+cl_SystemService.m in Sources */,
 				133AEE3D25A5BBE500B144CF /* CLPermissionsTools.m in Sources */,
 				13A7E2EA259C680200949FD3 /* NSString+NSRange.m in Sources */,
+				13A9605325B04170006AA3A4 /* MYHomePageViewController.m in Sources */,
+				13A9604E25B04164006AA3A4 /* MYFindViewController.m in Sources */,
 				13C43ECD25A8635300178795 /* NSDictionary+cl_Merge.m in Sources */,
 				1367DA6D2574EDD500A8C8F9 /* AppDelegate+Config.m in Sources */,
 				1367DA3D2574E74100A8C8F9 /* AppDelegate.m in Sources */,
 				13C43EA525A85E1900178795 /* NSData+CL_APNSToken.m in Sources */,
 				13C2D4E825A2F0F9004DF9E5 /* NSString+MimeType.m in Sources */,
+				13A9604525B04068006AA3A4 /* MYNavigationController.m in Sources */,
 				13A7E2E6259C5FC000949FD3 /* NSString+NSNumber.m in Sources */,
 				13A7E2F2259C72B500949FD3 /* NSString+CGSize.m in Sources */,
 				138A7F9425A461E7001D4730 /* UIScrollView+cl_Category.m in Sources */,
 				1390A58B25874DA000DC6816 /* LoginView.m in Sources */,
 				132711FE25ADA0C300F5FA9B /* AppConst.m in Sources */,
 				13F3148325AC3224004B5355 /* UIButton+cl_ImagePostion.m in Sources */,
+				13A9605725B0417A006AA3A4 /* MYLiveViewController.m in Sources */,
 				138A7F6A25A415A7001D4730 /* UIView+cl_Find.m in Sources */,
 				13C2D51525A31B51004DF9E5 /* UIView+cl_Action.m in Sources */,
 				13A7E2EE259C68F100949FD3 /* NSString+Regular.m in Sources */,
@@ -856,11 +935,13 @@
 				1367DA4E2574E74300A8C8F9 /* main.m in Sources */,
 				13A7E2F6259C756100949FD3 /* NSString+TransForm.m in Sources */,
 				13C43ED225A8639B00178795 /* NSDictionary+cl_URL.m in Sources */,
+				13A9605F25B0418D006AA3A4 /* MYMessageViewController.m in Sources */,
 				13C43EBE25A8620E00178795 /* NSDate+cl_Date.m in Sources */,
 				13B270D025AC390D00FA7CAB /* UIImage+cl_Gif.m in Sources */,
 				133AEE3925A5BB6E00B144CF /* CLSoundTools.m in Sources */,
 				13A7E2FA259C774700949FD3 /* NSString+Encryption.m in Sources */,
 				138A7F6625A41469001D4730 /* UIView+cl_Screenshot.m in Sources */,
+				13A9603B25B03719006AA3A4 /* MYTabbarViewController.m in Sources */,
 				13B270CB25AC37D500FA7CAB /* UIImage+cl_Size.m in Sources */,
 				13C43EE025A865E200178795 /* NSObject+cl_Category.m in Sources */,
 				13B270E425AC3B9900FA7CAB /* UILabel+cl_Create.m in Sources */,
@@ -876,6 +957,7 @@
 				13C2D51925A31D4E004DF9E5 /* UIView+cl_style.m in Sources */,
 				13C43EAF25A85EE800178795 /* NSArray+CL_Log.m in Sources */,
 				13B270DF25AC3A4900FA7CAB /* UIImage+cl_Editor.m in Sources */,
+				13A9605B25B04184006AA3A4 /* MYMeViewController.m in Sources */,
 				13A7E2E1259C58B100949FD3 /* NSMutableAttributedString+CLKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
