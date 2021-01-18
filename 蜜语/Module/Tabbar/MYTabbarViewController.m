@@ -24,17 +24,9 @@
 - (instancetype)init {
     self = [super init];
     if( self ) {
-//        [self customizeInterface];
+        [self customizeInterface];
+        [self customizeNavBarInterface];
         [self setupTabBarController];
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        // 要消除警告的代码
-        self.tabBar.selectedImageTintColor = CLKit_RGBAColor(246, 76, 113, 1);
-#pragma clang diagnostic pop
-        //显示未读
-        UINavigationController *discoverNav   = (UINavigationController *) self.viewControllers[1];
-        UITabBarItem *          curTabBarItem = discoverNav.tabBarItem;
-        [curTabBarItem setBadgeValue:@"2"];
     }
     return self;
 }
@@ -42,7 +34,6 @@
 - (void)setupTabBarController {
     /// 设置TabBar属性数组
     self.tabBarItemsAttributes = [self tabBarItemsAttributesForController];
-
     /// 设置控制器数组
     self.viewControllers = [self mpViewControllers];
     self.delegate        = self;
@@ -108,7 +99,7 @@
 
     // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs            = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    selectedAttrs[NSForegroundColorAttributeName] = CLKit_RGBAColor(246, 76, 113, 1);
 
     // 设置文字属性
     UITabBarItem *tabBar = [UITabBarItem appearance];
@@ -117,8 +108,41 @@
 
     // 设置背景图片
     UITabBar *tabBarAppearance = [UITabBar appearance];
-    [tabBarAppearance setBackgroundImage:[UIImage imageNamed:@"tabbar_background"]];
+    [tabBarAppearance setBackgroundImage:[UIImage cl_imageWithColor:UIColor.whiteColor]];
+    //    [tabBarAppearance setShadowImage:[[UIImage alloc] init]];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
+
+- (void)customizeNavBarInterface {
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+
+    UIImage *     backgroundImage = nil;
+    NSDictionary *textAttributes  = nil;
+
+    if( NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1 ) {
+        backgroundImage = [UIImage cl_imageWithColor:UIColor.whiteColor];
+
+        textAttributes = @{
+            NSFontAttributeName : [UIFont boldSystemFontOfSize:18],
+            NSForegroundColorAttributeName : [UIColor blackColor],
+        };
+    } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+        backgroundImage = [UIImage cl_imageWithColor:UIColor.whiteColor];
+
+        textAttributes = @{
+            UITextAttributeFont : [UIFont boldSystemFontOfSize:18],
+            UITextAttributeTextColor : [UIColor blackColor],
+            UITextAttributeTextShadowColor : [UIColor clearColor],
+            UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetZero],
+        };
+#endif
+    }
+    //    [navigationBarAppearance setShadowImage:[[UIImage alloc] init]];
+    [navigationBarAppearance setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setTitleTextAttributes:textAttributes];
+}
+
 #pragma mark - UITabBarControllerDelegate
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UINavigationController *)viewController {

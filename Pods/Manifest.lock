@@ -20,6 +20,9 @@ PODS:
     - CYLTabBarController/Core (= 1.29.0)
   - CYLTabBarController/Core (1.29.0)
   - DZNEmptyDataSet (1.8.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - IQKeyboardManager (6.5.6)
   - JCore (2.4.0)
   - JPush (3.4.0):
@@ -64,6 +67,7 @@ DEPENDENCIES:
   - AgoraRtm_iOS
   - CYLTabBarController
   - DZNEmptyDataSet
+  - FMDB
   - IQKeyboardManager
   - JPush
   - Masonry
@@ -87,6 +91,7 @@ SPEC REPOS:
     - AgoraRtm_iOS
     - CYLTabBarController
     - DZNEmptyDataSet
+    - FMDB
     - IQKeyboardManager
     - JCore
     - JPush
@@ -109,6 +114,7 @@ SPEC CHECKSUMS:
   AgoraRtm_iOS: 5fb55028ec41659a8d88bebecc5c95a742102d4f
   CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   JCore: a29e4b0ee54e1301446dc02d8e1c350404108b34
   JPush: defaa108c38806f6efdcfaf4c416854d25fca8e5
@@ -125,6 +131,6 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: dc8868cf3513dca57ae03b7474f647e384f7128b
+PODFILE CHECKSUM: 6d7a82590e3126ab1f50e363a89838957e64752e
 
 COCOAPODS: 1.10.0

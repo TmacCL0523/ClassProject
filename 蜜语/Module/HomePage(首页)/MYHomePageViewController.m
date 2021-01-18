@@ -1,13 +1,17 @@
-//
-//  MYHomePageViewController.m
-//  MiYu
-//
-//  Created by QiYue on 2021/1/14.
-//
+/*
+ *********************************************************************************
+ *
+ * 用户名:     hcl
+ * 文件名:     MYHomePageViewController.m
+ * 创建时间:    2020-12-29
+ * 作用:       首页
+ *********************************************************************************
+ */
 
 #import "MYHomePageViewController.h"
 
-@interface MYHomePageViewController ()
+@interface
+    MYHomePageViewController ()
 
 @end
 
@@ -16,16 +20,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [self addRigthButton];
+    self.view.backgroundColor = UIColor.redColor;
+
+    //    self.navigationItem.titleView = vc.searchBar;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
-*/
+
+- (void)addRigthButton {
+    CLKit_WeakSelf(self);
+
+    UIBarButtonItem *right = [UIBarButtonItem cl_buttonWithImage:@"Tabbar_HomePage"
+                                                          method:^ {
+
+                                                          }];
+
+    self.navigationItem.rightBarButtonItem = right;
+}
 
 @end

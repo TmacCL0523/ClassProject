@@ -9,5 +9,8 @@
 
 -(void)rootViewController;
 
+-(void)setKeyBordSetting;
+
+
 @end
 

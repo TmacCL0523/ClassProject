@@ -23,6 +23,8 @@
 
     [self registerJPusherWithOptions:launchOptions];
     [self registerNotification];
+    
+    [self setKeyBordSetting];
     [self rootViewController];
 
     CLLogSize(CLKit_ScreenSize);

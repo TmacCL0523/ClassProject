@@ -20,11 +20,13 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    CLLogString(@"重写");
     if( self.viewControllers.count > 0 ) {
         //第二级则隐藏底部Tab
         viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController:viewController animated:animated];
 }
+
 
 @end

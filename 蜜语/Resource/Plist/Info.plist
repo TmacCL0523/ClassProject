@@ -41,13 +41,6 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>NSExceptionAllowsInsecureHTTPLoads</key>
-			<true/>
-			<key>NSIncludesSubdomains</key>
-			<true/>
-		</dict>
 	</dict>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>蓝牙使用权限</string>

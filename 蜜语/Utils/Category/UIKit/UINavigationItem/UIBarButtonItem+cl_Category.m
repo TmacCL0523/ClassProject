@@ -18,7 +18,7 @@
 /// @param method 点击回调
 + (UIBarButtonItem *)cl_buttonWithTitle:(NSString *)title method:(BarButtonMethodBlock)method {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame     = CGRectMake(0, 0, 40, 40);
+    btn.frame     = CGRectMake(0, 0, 25, 25);
     [btn setTitle:title forState:UIControlStateNormal];
     [btn cl_addTargerWithAction:^(UIButton *btn) {
         if( method ) {
@@ -33,15 +33,14 @@
 /// @param imageName 图片名称
 /// @param method 点击回调
 + (UIBarButtonItem *)cl_buttonWithImage:(NSString *)imageName method:(BarButtonMethodBlock)method {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame     = CGRectMake(0, 0, 40, 40);
-    [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
-    [btn cl_addTargerWithAction:^(UIButton *btn) {
+    UIButton *baseRightImageButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [baseRightImageButton setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [baseRightImageButton cl_addTargerWithAction:^(UIButton *btn) {
         if( method ) {
             method();
         };
     }];
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:baseRightImageButton];
     return barButtonItem;
 }
 
@@ -52,7 +51,7 @@
 /// @param method 点击回调
 + (UIBarButtonItem *)cl_buttonWithTitle:(NSString *)title image:(NSString *)imageName selectImage:(NSString *)selectImageName method:(BarButtonMethodBlock)method {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame     = CGRectMake(0, 0, 40, 40);
+    btn.frame     = CGRectMake(0, 0, 25, 25);
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:selectImageName] forState:UIControlStateHighlighted];

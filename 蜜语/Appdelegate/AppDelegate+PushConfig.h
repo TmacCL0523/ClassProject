@@ -12,9 +12,13 @@
 
 @interface AppDelegate (PushConfig)
 
-/// 注册极光推送
+/// 注册APNS
 - (void)registerNotification;
 
+/// 注册voip
+- (void)voipRegistration;
+
+/// 注册极光推送
 - (void)registerJPusherWithOptions:(NSDictionary *)launchOptions;
 
 @end

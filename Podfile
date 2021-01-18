@@ -17,6 +17,7 @@ target 'MiYu' do
   pod 'CYLTabBarController'
   pod 'TZImagePickerController'  #照片选择浏览器
   pod 'UITableView+FDTemplateLayoutCell'
+  pod 'FMDB' #数据库
 
 #  友盟分享&登录
   pod 'UMCommon'
